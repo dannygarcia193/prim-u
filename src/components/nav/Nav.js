@@ -2,7 +2,8 @@ import React from 'react'
 import * as styles from "./Nav.module.css" 
 import { Link } from 'gatsby'
 import Logo from "./Logo"
-
+import Collapser from "./Collapser"
+import HamburgerIcon from './HamburgerMenuIcon'
 const LinkContainer = () => {
     return (
         <ul className={styles.NavLinkContainer}>
@@ -28,7 +29,8 @@ const LogoContainer = () => {
     )
 }
 
-const NavToggler = ({collapsedNavbar, setCollapsedNavbar, togglerIcon}) => {
+const NavToggler = ({collapsedNavbar, setCollapsedNavbar}) => {
+    const currentIcon = collapsedNavbar===false ? <HamburgerIcon/>:<Collapser/>
     return (
         <button className={styles.NavToggler}
             type="button"
@@ -37,22 +39,41 @@ const NavToggler = ({collapsedNavbar, setCollapsedNavbar, togglerIcon}) => {
             aria-label="Toggle navigation"
         onClick={()=>  setCollapsedNavbar(!collapsedNavbar)}
             >
-            <span className={togglerIcon}></span>
+            {currentIcon}
         </button>
     )
 }
 const Navbar = () =>{
     const [collapsedNavbar, setCollapsedNavbar] = React.useState(false)
+    const [lightNav, setLightNav] = React.useState(false);
     const showDropdownNav = collapsedNavbar===true ? styles.DropdownNav: ''
-    const togglerIcon = collapsedNavbar===false ? styles.NavbarOpenIcon:styles.NavbarCloseIcon
+    const dynamicStyles= {
+        backgroundColor: lightNav ? "white": "transparent",
+        height: lightNav ? "5rem": "5.625rem",  
+        transition: "all 0.2s"
+    }
+    const turnTextDark =  lightNav===true ||  collapsedNavbar===true ? styles.textDark: ''
+
+    function handleScroll() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop      
+        const height =document.documentElement.scrollHeight - document.documentElement.clientHeight    
+        const scrolled = winScroll / height
+        if (scrolled > .01) setLightNav(true);
+        else setLightNav(false);
+      }
+    
+      React.useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      });
+
     return (
-        <nav role="navigation" className={styles.Nav} >
-            <div className={styles.NavContainer +' '+ showDropdownNav}>
+        <nav role="navigation" className={styles.Nav} style={dynamicStyles} >
+            <div className={styles.NavContainer +' '+ showDropdownNav + ' ' + turnTextDark }>
                     <LogoContainer />
                     <NavToggler 
-                    collapsedNavbar={collapsedNavbar} 
-                    setCollapsedNavbar={setCollapsedNavbar}
-                    togglerIcon={togglerIcon}
+                        collapsedNavbar={collapsedNavbar} 
+                        setCollapsedNavbar={setCollapsedNavbar}
                     />
                     <LinkContainer/>
             </div>

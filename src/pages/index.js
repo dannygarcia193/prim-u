@@ -1,33 +1,25 @@
 import * as React from "react"
 import "./index.css"
 import Navbar from "../components/nav/Nav"
-
+import Hero from "../components/hero/Hero"
 const IndexPage = () => {
   return (
     <>
     <Navbar />
-    <main style={{marginTop:"20rem"}}>
+    <main>
       <title>Prim-U</title>
-      <span>Initial span tag</span>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1><h1>Placeholder for now</h1>
-
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
-      <h1>Placeholder for now</h1>
+      <Hero />
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      <h1>Placeholder</h1>
+      
     </main>
     </>
   )
