@@ -154,7 +154,7 @@
         width: 2.5rem;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items:center;
         height: 2.04375rem;
         justify-content: center;
         transform: rotate(90deg);
