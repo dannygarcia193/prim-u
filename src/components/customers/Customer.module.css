@@ -4,6 +4,10 @@
     border-radius: 20px;
     height: 643px; 
     display:flex;
+    padding-left: 60px;
+    padding-right:60px;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 .CardContainer{
     height: 643px; 
@@ -18,6 +22,7 @@
     width:100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .ButtonContainer{
     max-width: 50%;
@@ -27,8 +32,15 @@
     align-content: flex-end;
     justify-content: flex-end;
     align-items: center;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
+}
+button:hover{
+    background: var(--primary);
+    cursor:pointer;
+    transition: all .2s ease-out;
+}
+button:hover .ButtonText{
+    color:var(--white);
 }
 .Heading{
     font-family: var(--robotoCondensed);
@@ -39,8 +51,6 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: var(--white);
-    padding-left:60px;
-    padding-top:60px;
 }
 
 .Text{
@@ -51,15 +61,12 @@
     line-height: 28px;
     color:var(--white)
 }
-p:nth-child(2){
-    padding-top: 284px;
-    padding-left:60px;
+.DescriptionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
-p:nth-child(3){
-    padding-top:32px;
-    padding-left:60px;
-    width:584px;
-}
+
 .ButtonText{
     font-family: var(--robotoCondensed);
     font-style: normal;
@@ -71,13 +78,9 @@ p:nth-child(3){
 .CTAButton{
     border-radius: 10px;
     padding: 16px 30px;
-    margin-bottom: 40px;
-    margin-right: 60px;
+    border-color: transparent;
 }
 @media screen and (max-width: 1024px){
-    .CardContainer{
-        margin: 0 2.5rem;
-    }
     .TextContainer{
         max-width:100%;
     }
@@ -85,14 +88,70 @@ p:nth-child(3){
         max-width:100%;
         align-content: flex-start;
         justify-content: normal;
-        padding-left:60px;
-        padding-top:40px;
     }
     .Card{
+        flex-wrap: wrap;
+    align-content: space-between
+    }
+    .DescriptionContainer p:first-child{
+        padding-bottom: 32px;
+    }
+
+    .DescriptionContainer{
         display:block;
+        padding-bottom: 0;
+        padding-top:164px;
+        width: 75%;
     }
-    p:nth-child(2){
-        padding-top: 164px;
+    .CTAButton{
+        margin-bottom: 0;
     }
+
+    
 }
 
+
+@media screen and (max-width:768px){
+    .Card{
+        padding-left:16px;
+        padding-right: 16px;
+        padding-top:36px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    .CardContainer{
+        margin: 0 10px;
+        background-image: url("../../images/customerMobile.jpg");
+    }
+    .Text{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .Heading{
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .CTAButton{
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    .ButtonContainer{
+        padding:0;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    .DescriptionContainer{
+        width:100%;
+    }
+    .DescriptionContainer p:first-child{
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (min-width:576px) and (max-width: 768px){
+    .ButtonContainer{
+        align-items: flex-start;
+    }
+}
