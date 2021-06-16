@@ -1,0 +1,206 @@
+.Nav{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1440px;
+    width: 100%;
+    height: 5.625rem;
+    background-color: var(--black);
+    z-index:1000000;
+}
+.NavContainer{
+    position: relative;
+    display: flex;
+    height:100%;
+    align-items:flex-end;
+    justify-content: space-between;
+    border-radius: 0.625rem;
+    transition: all .2s;  
+    margin-left: 3.75rem;
+    margin-right: 3.75rem;
+}
+
+.LogoContainer{
+    height: 3.1875rem;
+    max-width: 15.375rem;
+    width: 15.375rem;
+    display:flex;
+    align-items:center;
+}
+
+.Logo{
+    height: inherit;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .2s;
+    margin-right: 1.333333333rem;
+  }
+  svg:hover > path:last-child {
+    fill: #A791B8;
+  }
+  svg:hover > path:not(:first-child){
+    fill: #683D83;
+  }
+  svg:hover{
+    cursor:pointer;
+  }
+
+.LogoTitle{
+    font-family: var(--roboto);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.875rem;
+    line-height: 2.1875rem;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    margin: 0;
+    transition: all .2s;
+}
+
+.NavLinkContainer{
+    display:flex;
+    flex-direction: row;
+    column-gap: 2.5rem;
+    list-style: none;
+    margin-left:auto;
+    margin-bottom:0;
+    margin-top:0;
+    padding:0;
+}
+.NavItem{
+    flex: 1 1 auto;
+    text-align: center;
+}
+.NavLink{
+    font-family: var(--robotoCondensed);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.4375rem;
+    letter-spacing: -0.01em;
+    text-decoration:none;
+    color:var(--white);
+}
+
+.NavLink:hover, .LogoTitle:hover{
+    cursor:pointer;
+    color: var(--primary);
+    text-decoration:none;
+    transition: all .1s; 
+}
+
+
+.NavToggler{
+    all: unset;
+    width: 30px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color);
+    cursor: pointer;
+    display: none;
+}
+.NavToggler:hover {
+    text-decoration: none;
+    cursor:pointer;
+  }
+.NavbarCloseIcon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    cursor: pointer;
+    background-image: url("../../images/collapser.svg");
+    transform: rotate(180);
+    transition-duration: .4s;
+    }
+.NavbarOpenIcon {
+    display: inline-block;
+    width: 1.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("../../images/hamburgerMenuIcon.svg");
+    transform: rotate(180deg);
+    transition-duration: 400ms;
+}
+
+/*
+@media  screen and (max-width: 1024px) {
+    
+}*/
+
+@media screen and (max-width: 640px){
+    .Nav{
+        height:3.3125rem;
+    }
+    .NavLinkContainer{
+        display:none
+    }
+    .LogoContainer{
+        display:flex;
+        margin-top:0;
+        align-items: flex-end;
+    }
+    .Logo{
+        height: 2.04375rem;
+        margin-right: 0.5625rem;
+    }
+    .LogoTitle{
+        font-size: 0.86625rem;
+    }
+    .NavToggler{
+        display:inline-block;
+        padding-bottom: 0.625rem;
+    }
+    .DropdownNav{
+        top:10px;
+        margin-left: 0.625rem;
+        margin-right:0.625rem;
+        background-color:white;
+        padding: 12px 10px 0; 
+    }
+    .DropdownNav .LogoContainer{
+        display:inline-flex;
+        align-items: flex-start
+    }
+
+    .DropdownNav .NavLinkContainer{
+        display: flex;
+        flex-direction: column; 
+        margin: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        align-items: center;
+        row-gap: 20px;
+        transition: all .3s ease-out;
+    }
+    .DropdownNav.NavContainer{
+        display:block !important;
+        height:fit-content;
+    }
+    .DropdownNav .NavToggler{
+        height: 51px;
+        padding: 0;
+        float:right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .DropdownNav .NavLink, .DropdownNav .LogoTitle{
+        color:var(--black)
+    }
+    .DropdownNav svg > path:last-child {
+        fill: #A6A6A6 ;
+      }
+    .DropdownNav  svg > path:not(:first-child){
+        fill: var(--black);
+      }
+
+}

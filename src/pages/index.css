@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700;900&display=swap');
+
+  :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --primary: #683D83;
+    --gray: #F2F2F2;
+    --bg-image:rgba(0, 0, 0, 0.5);
+    --sm:640px;
+    --md:768px;
+    --lg:1024px;
+    --xl:1280px;
+    --xxl:1440px;
+    --roboto: Roboto, sans-serif;
+    --robotoCondensed: 'Roboto Condensed', sans-serif;
+  }
+  html {
+  box-sizing: border-box;
+  font-size:16px;
+  line-height: 1;  
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  }
+  *{
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-family: var(--roboto), var(--robotoCondensed);
+    font-size: 1rem;
+    color: var(--black);
+    background: var(--white);
+    overflow-y: auto;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+ 
+  hr {
+    box-sizing: content-box; 
+    height: 0; 
+    overflow: visible; 
+  }
+ 
+  b,
+  strong {
+    font-weight: bolder;
+  }
+ 
+  small {
+    font-size: 80%;
+  }
+
+  img {
+    border-style: none;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; 
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0; 
+  }
+
+  button,
+  input { 
+    overflow: visible;
+  }
+
+  button,
+  select { 
+    text-transform: none;
+  }
+ 
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  details {
+    display: block;
+  }
+
+  summary {
+    display: list-item;
+  }
