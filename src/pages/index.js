@@ -11,8 +11,12 @@ const IndexPage = () => {
     <main>
       <title>Prim-U</title>
       <Hero />
-      <Card />
+      <Card small={false} />
       <Gallery/>
+      <Card small={true} />
+      <Card small={true} />
+      <Card small={true} />
+      <Card small={true} />
       
     </main>
     </>

@@ -1,8 +1,10 @@
 import React from "react"
 import * as styles from "./Card.module.css"
-const Customer = () => {
+
+const Card = ({small}) => {
+    const size = small===true ? styles.Small : styles.Large
     return(
-    <div className={styles.CardContainer}>
+    <div className={styles.CardContainer + ' ' +size}>
         <div className={styles.Card}>
             <div className={styles.TextContainer}>
                 <p className={styles.Heading}>FOR CUSTOMERS</p>
@@ -22,4 +24,4 @@ const Customer = () => {
     )
 }
 
-export default Customer
+export default Card

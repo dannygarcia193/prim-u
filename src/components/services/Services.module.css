@@ -26,6 +26,9 @@
     border-radius: 1.25rem;
 }
 
+.ExtraSpace{
+    height:40px;
+}
 .Heading{
 font-family: Roboto Condensed;
 font-style: normal;
@@ -36,7 +39,6 @@ letter-spacing: -0.01em;
 text-transform: uppercase;
 color: #000000;
 margin: 0 3.75rem;
-margin-top:100px;
 margin-bottom:60px;
 }
 
@@ -72,7 +74,7 @@ color: #FFFFFF;
     }
 }
 
-@media screen and (max-width:640px){
+@media screen and (max-width:768px){
     .ImageContainer{
         margin-bottom: 1.25rem;
         height: 10.78125rem;
@@ -83,7 +85,6 @@ color: #FFFFFF;
     }
     .Heading{
         margin:0 0.625rem;
-        margin-top:60px;
         margin-bottom:30px; 
         font-size: 34px;
         line-height: 40px;
@@ -96,29 +97,8 @@ line-height: 35px;
         margin-top:60.5px;
 margin-bottom:40px
     }
-}
-
-
-@media screen and (min-width:640px) and (max-width:768px){
-    .ImageContainer{
-        width: 30.304%;
-    }
-    .Gallery{
-        margin:0 0.625rem;
-    }
-    .Heading{
-        margin:0 0.625rem;
-        margin-top:60px;
-        margin-bottom:30px; 
-        font-size: 34px;
-        line-height: 40px;
-    }
-    .Service{
-        font-size: 30px;
-line-height: 35px;
-    }
-    .HR{
-        margin-top:60.5px;
-margin-bottom:40px
+    .ExtraSpace{
+        display:none;
     }
 }
+

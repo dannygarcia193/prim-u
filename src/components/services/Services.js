@@ -15,6 +15,7 @@ const Gallery = () =>{
     })
     return(
         <>
+        <div className={styles.ExtraSpace} />
         <h2 className={styles.Heading}>treat yourself with <span>our services</span></h2>
         <div className={styles.Gallery}>
             {image}
