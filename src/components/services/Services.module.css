@@ -1,0 +1,52 @@
+
+.ImageContainer{
+    width: 30.304%;
+    height: 25rem;
+    background-color: black;
+    margin-bottom: 3.75rem;
+    border-radius:1.25rem;
+}
+
+.Heading{
+font-family: Roboto Condensed;
+font-style: normal;
+font-weight: bold;
+font-size: 3.125rem;
+line-height: 3.6875rem;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+color: #000000;
+}
+.Gallery{
+    display: flex;
+    margin: 0 3.75rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:1024px){
+    .ImageContainer{
+        margin-bottom: 2.5rem;
+        height: 17.75rem;
+    }
+}
+
+@media screen and (max-width:640px){
+    .ImageContainer{
+        margin-bottom: 1.25rem;
+        height: 10.78125rem;
+        width: 48.6%;
+    }
+    .Gallery{
+        margin:0 0.625rem;
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:768px){
+    .ImageContainer{
+        width: 30.304%;
+    }
+    .Gallery{
+        margin:0 0.625rem;
+    }
+}

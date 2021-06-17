@@ -7,6 +7,7 @@
     background-color: black;
     background-position-x: 7.5rem;
     background-position-y: -13.4375rem;
+    margin-bottom: 60px;
 }
 .HeroContainer{
     display: flex;
@@ -61,5 +62,8 @@
 @media screen and (max-width: 640px) {
     .Title{
         width: 20.9375rem;
+    }
+    .Hero{
+        margin-bottom: 20px;
     }
 }

@@ -1,21 +1,21 @@
 
 .Card{
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    height: 643px; 
+    border-radius: 1.25rem;
+    height: 40.1875rem;
     display:flex;
-    padding-left: 60px;
-    padding-right:60px;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-left: 1.25rem;
+    padding-right:1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
 }
 .CardContainer{
-    height: 643px; 
-    border-radius: 20px;
+    height: 40.1875rem;
+    border-radius: 1.25rem;
     margin: 0 3.75rem;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../../images/customer.jpg")
+    background-image: url("../../images/customer.jpg");
 }
 
 .TextContainer{
@@ -47,8 +47,8 @@ button:hover .ButtonText{
     font-family: var(--robotoCondensed);
     font-style: normal;
     font-weight: var(--bold);
-    font-size: 50px;
-    line-height: 59px;
+    font-size: 3.125rem;
+    line-height: 3.6875rem;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: var(--white);
@@ -58,8 +58,8 @@ button:hover .ButtonText{
     font-family: var(--roboto);
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     color:var(--white)
 }
 .DescriptionContainer{
@@ -72,41 +72,41 @@ button:hover .ButtonText{
     font-family: var(--robotoCondensed);
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
     color:var(--primary)
 }
 .CTAButton{
-    border-radius: 10px;
-    padding: 16px 30px;
+    border-radius: 0.625rem;
+    padding: 1rem 1.875rem;
     border-color: transparent;
 }
 
 
 .DescriptionContainer p.Text:not(:last-child){
-    padding-bottom:32px;
+    padding-bottom:2rem;
 }
 
 @media screen and (max-width:768px){
     .Card{
-        padding-left:16px;
-        padding-right: 16px;
-        padding-top:36px;
+        padding-left:1rem;
+        padding-right: 1rem;
+        padding-top:2.25rem;
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
     }
     .CardContainer{
-        margin: 0 10px;
+        margin: 0 0.625rem;
         background-image: url("../../images/customerMobile.jpg");
     }
     .Text{
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
     }
     .Heading{
-        font-size: 34px;
-        line-height: 40px;
+        font-size: 2.125rem;
+        line-height: 2.5rem;
     }
     .CTAButton{
         margin-bottom: 0;
@@ -118,10 +118,10 @@ button:hover .ButtonText{
         align-items: stretch;
     }
     .DescriptionContainer{
-        width:100%;
+        width:100% !important;
     }
     .DescriptionContainer p.Text:not(:last-child){
-        padding-bottom:20px;
+        padding-bottom:1.25rem;
     }
 
 }
@@ -147,7 +147,7 @@ button:hover .ButtonText{
     }
     .DescriptionContainer{
         display:block;
-        padding-top:164px;
+        padding-top:10.25rem;
         width: 75%;
     }
     .CTAButton{
