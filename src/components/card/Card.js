@@ -1,5 +1,5 @@
 import React from "react"
-import * as styles from "./Customer.module.css"
+import * as styles from "./Card.module.css"
 const Customer = () => {
     return(
     <div className={styles.CardContainer}>

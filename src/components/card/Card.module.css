@@ -4,10 +4,7 @@
     border-radius: 1.25rem;
     height: 40.1875rem;
     display:flex;
-    padding-left: 1.25rem;
-    padding-right:1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 2.5rem;
+    padding: 3.75rem;
 }
 .CardContainer{
     height: 40.1875rem;
@@ -89,12 +86,10 @@ button:hover .ButtonText{
 
 @media screen and (max-width:768px){
     .Card{
-        padding-left:1rem;
-        padding-right: 1rem;
-        padding-top:2.25rem;
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
+        padding: 2.25rem 1rem;
     }
     .CardContainer{
         margin: 0 0.625rem;

@@ -60,6 +60,10 @@ color: #FFFFFF;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.HR{
+    margin-top:100px;
+    margin-bottom:100px;
+}
 
 @media screen and (max-width:1024px){
     .ImageContainer{
@@ -84,7 +88,16 @@ color: #FFFFFF;
         font-size: 34px;
         line-height: 40px;
     }
+    .Service{
+        font-size: 30px;
+line-height: 35px;
+    }
+    .HR{
+        margin-top:60.5px;
+margin-bottom:40px
+    }
 }
+
 
 @media screen and (min-width:640px) and (max-width:768px){
     .ImageContainer{
@@ -99,5 +112,13 @@ color: #FFFFFF;
         margin-bottom:30px; 
         font-size: 34px;
         line-height: 40px;
+    }
+    .Service{
+        font-size: 30px;
+line-height: 35px;
+    }
+    .HR{
+        margin-top:60.5px;
+margin-bottom:40px
     }
 }

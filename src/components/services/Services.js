@@ -19,6 +19,7 @@ const Gallery = () =>{
         <div className={styles.Gallery}>
             {image}
         </div>
+        <hr className={styles.HR} />
         </>
     )
 }
