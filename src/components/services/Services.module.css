@@ -35,6 +35,13 @@ line-height: 3.6875rem;
 letter-spacing: -0.01em;
 text-transform: uppercase;
 color: #000000;
+margin: 0 3.75rem;
+margin-top:100px;
+margin-bottom:60px;
+}
+
+.Heading span{
+    color: var(--primary)
 }
 .Service{
     font-family: Roboto Condensed;
@@ -70,6 +77,13 @@ color: #FFFFFF;
     .Gallery{
         margin:0 0.625rem;
     }
+    .Heading{
+        margin:0 0.625rem;
+        margin-top:60px;
+        margin-bottom:30px; 
+        font-size: 34px;
+        line-height: 40px;
+    }
 }
 
 @media screen and (min-width:640px) and (max-width:768px){
@@ -78,5 +92,12 @@ color: #FFFFFF;
     }
     .Gallery{
         margin:0 0.625rem;
+    }
+    .Heading{
+        margin:0 0.625rem;
+        margin-top:60px;
+        margin-bottom:30px; 
+        font-size: 34px;
+        line-height: 40px;
     }
 }

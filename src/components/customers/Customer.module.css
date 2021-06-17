@@ -16,7 +16,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../../images/customer.jpg");
-    margin-bottom: 60px;
 }
 
 .TextContainer{
@@ -100,7 +99,6 @@ button:hover .ButtonText{
     .CardContainer{
         margin: 0 0.625rem;
         background-image: url("../../images/customerMobile.jpg");
-        margin-bottom: 20px;
     }
     .Text{
         font-size: 1.125rem;

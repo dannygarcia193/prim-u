@@ -6,7 +6,7 @@ const ServicesImage = ["image2.svg","image3.svg", "Rectangle8.svg", "image4.svg"
 const Gallery = () =>{
     const image = ServicesImage.map( (imageURL, idx)=> {
         return (
-            <div className={styles.ImageContainer}>
+            <div key={idx} className={styles.ImageContainer}>
                 <div className={styles.Overlay}>
                 <p className={styles.Service}>{ServicesText[idx]}</p>
                 </div>
@@ -14,9 +14,12 @@ const Gallery = () =>{
         )
     })
     return(
+        <>
+        <h2 className={styles.Heading}>treat yourself with <span>our services</span></h2>
         <div className={styles.Gallery}>
             {image}
         </div>
+        </>
     )
 }
 export default Gallery
