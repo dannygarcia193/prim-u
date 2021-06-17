@@ -56,7 +56,10 @@ body {
     box-sizing: content-box; 
     height: 0; 
     overflow: visible; 
+    margin-top:100px;
+    margin-bottom:100px;
   }
+
  
   b,
   strong {
@@ -121,3 +124,10 @@ body {
   summary {
     display: list-item;
   }
+
+  @media screen and (max-width:768px){
+    hr{
+        margin-top:60.5px;
+margin-bottom:40px
+    }
+}
