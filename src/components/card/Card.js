@@ -17,11 +17,11 @@ const Card = ({small}) => {
                 </div>
             </div>
             <div className={styles.ButtonContainer}>
-                <button className={styles.CTAButton}><span className={styles.ButtonText}>Make a Booking</span></button>
+                <button className={"CTAButton " +styles.btn}><span className="ButtonText">Make a Booking</span></button>
             </div>
         </div>
     </div>
     )
-}
+} 
 
 export default Card

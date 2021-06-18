@@ -125,9 +125,34 @@ body {
     display: list-item;
   }
 
-  @media screen and (max-width:768px){
-    hr{
-        margin-top:60.5px;
+@media screen and (max-width:768px){
+  hr{
+      margin-top:60.5px;
 margin-bottom:40px
-    }
+  }
+}
+
+.CTAButton{
+  border-radius: 0.625rem;
+  padding: 1rem 1.875rem;
+  border-color: transparent;
+  background-color:#efefef;
+}
+.CTAButton:hover{
+  background-color:var(--primary);
+  cursor:pointer;
+  transition: all .2s ease-in;
+  color:white;
+}
+.ButtonText{
+  font-family: var(--robotoCondensed);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color:var(--primary);
+  text-transform: uppercase;
+}
+button:hover .ButtonText{
+  color:white;
 }

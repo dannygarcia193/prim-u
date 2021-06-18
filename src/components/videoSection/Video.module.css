@@ -1,0 +1,60 @@
+.Placeholder{
+    background-image: url("../../images/image12.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 59.75%;
+  height: 450px;
+  margin:auto;
+  margin-bottom:60px;
+  }
+
+.CTAButton{
+    margin-top: 60px;
+    display:flex;
+    margin:auto;
+    background-color:var(--primary)
+}
+.ButtonText{
+    color: white
+}
+.Text{
+    display:none;
+}
+
+@media screen and (max-width:1024px){
+    .Placeholder{
+       width: 84%;
+    }
+   }
+
+@media screen and (max-width:768px){
+    .Placeholder{
+      width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 209px;
+    margin-bottom: 40px;
+    }
+    .CTAButton{
+      width: 90%;
+      align-items: stretch;
+      justify-content: center;
+    }
+    .Text{
+        display:block;
+      font-family: Roboto Condensed;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 40px;
+      /* identical to box height */
+      
+      text-align: center;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      
+      color: #000000;
+      margin-bottom:30px;
+    }
+  }
+  

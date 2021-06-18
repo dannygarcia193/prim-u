@@ -8,7 +8,7 @@ const Services  = () => {
             <div className={styles.ImageContainer + " "+ styles.Custom}>
                 <div className={styles.Overlay}>
                 <p className={styles.Service}>For Freelancers</p>
-                <button className={styles.CTAButton}><span className={styles.ButtonText}>Sign Up</span></button>
+                <button className={"CTAButton " + styles.CTAButton}><span className="ButtonText">Make a Booking</span></button>
                 </div>
             </div>
             <p className={styles.Text}>Connecting U to our network of customers
@@ -18,7 +18,7 @@ const Services  = () => {
             <div className={styles.ImageContainer + " "+ styles.Custom}>
                 <div className={styles.Overlay}>
                 <p className={styles.Service}>For Salons / Spas</p>
-                <button className={styles.CTAButton}><span className={styles.ButtonText}>Sign Up</span></button>
+                <button className={"CTAButton " + styles.CTAButton}><span className="ButtonText">Sign Up</span></button>
                 </div>
             </div>
             <p className={styles.Text}>The beauty platform that benefits U.

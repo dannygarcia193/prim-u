@@ -1,4 +1,6 @@
 require("dotenv").config();
+const path = require(`path`);
+
 
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -23,6 +25,9 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
-    }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
   ],
 };

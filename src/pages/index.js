@@ -6,7 +6,9 @@ import Card from "../components/card/Card"
 import Gallery from "../components/gallery/Gallery"
 import Header from "../components/header/Header"
 import Services from "../components/gallery/Services"
-//import Services from "../components/services/Services"
+import AppSection from "../components/app/App"
+import VideoContainer from "../components/videoSection/Video"
+
 const IndexPage = () => {
   return (
     <>
@@ -24,6 +26,10 @@ const IndexPage = () => {
       <hr  />
       <Header text={"For those who provide"} bold={"beauty services"} text2={''} />
     <Services/>
+    <AppSection/>
+    <VideoContainer />
+    <hr />
+    <Header text={"What our"} bold={"customers"} text2={'say'} />
     </main>
     </>
   )
