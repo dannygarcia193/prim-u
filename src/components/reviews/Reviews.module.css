@@ -48,25 +48,23 @@ height:20px;
 .MainReview{
     overflow-x: scroll;
 }
+
 .MainReview::-webkit-scrollbar {
-    background: #C4C4C4;
-    border-radius: 2px;
-    height:2px;
+    border-radius: 5px;
+    height:8px;
 }
-     
+.MainReview::-webkit-scrollbar-track{
+    background: #C4C4C4;
+    border-radius: 5px;
+}
 .MainReview::-webkit-scrollbar-thumb {
     background: #000000;
-    border-radius: 2px;
+    border-radius: 5px;
 }
-.MainReview::-webkit-scrollbar-button:end:increment {
-    width:290px;
-    display: block;
-    background-color:#ffffff !important;
-    background:#ffffff !important
+.MainReview::-webkit-scrollbar-button:single-button:horizontal:decrement,.MainReview::-webkit-scrollbar-button:single-button:horizontal:increment  {
+    border-radius:5px;
   }
-.MainReview::-webkit-scrollbar-button:start:decrement{
-    width:290px;
+.MainReview::-webkit-scrollbar-button:end:increment,.MainReview::-webkit-scrollbar-button:start:decrement {
+    width:20%;
     display: block;
-    background-color:#ffffff !important;
-    background:#ffffff !important
-}
+  }
