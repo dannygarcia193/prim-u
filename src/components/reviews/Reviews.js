@@ -19,13 +19,25 @@ const Reviews = () => {
        )
         }
     )
-    return <div style={{display:'inline-flex', marginBottom:"60px"}}>{reviews}</div>
+    return <div  style={{display:'inline-flex', marginBottom:"60px"}}>
+        {reviews}</div>
 }
 const ReviewContainer = () => {
+    const ref = React.useRef(null);
+
+    const scroll = (scrollOffset) => {
+        ref.current.scrollLeft += scrollOffset;
+      };
     return (
-    <div className={styles.MainReview}>
-        <Reviews/>
+    <>
+    <div className={styles.MainReview}  ref={ref}> 
+        <Reviews />
     </div>
+    <div className={styles.Test}>
+    <button className={styles.ScrollControl + " " + styles.Left} onClick={() => scroll(-50)}/>
+    <button className={styles.ScrollControl  + " " + styles.Right} onClick={() => scroll(50)}/>
+    </div>
+    </>
     )
 }
 
