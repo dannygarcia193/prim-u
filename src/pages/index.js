@@ -8,7 +8,7 @@ import Header from "../components/header/Header"
 import Services from "../components/gallery/Services"
 import AppSection from "../components/app/App"
 import VideoContainer from "../components/videoSection/Video"
-
+import ReviewContainer from "../components/reviews/Reviews"
 const IndexPage = () => {
   return (
     <>
@@ -30,6 +30,9 @@ const IndexPage = () => {
     <VideoContainer />
     <hr />
     <Header text={"What our"} bold={"customers"} text2={'say'} />
+    <ReviewContainer/>
+    <hr />
+    <Header text={"Beauty products"} bold={"for u"} text2={''} />
     </main>
     </>
   )

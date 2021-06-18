@@ -1,0 +1,72 @@
+.ReviewContainer{
+    background: #F2F2F2;
+    border-radius: 20px;
+    width: 520px;
+    height: 240px;
+    margin-right:40px;
+    padding:20px;
+    margin: 0 3.75rem;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.Reviewer{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+    color: #000000;
+}
+.RatingContainer{
+    display:flex;
+}
+.Rating{
+background-image: url("../../images/star.svg");
+width:20px;
+height:20px;
+}
+.Info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.Review{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */ 
+    color: #5C5C5C;
+    margin-top:26px;
+    
+}
+
+.MainReview{
+    overflow-x: scroll;
+}
+.MainReview::-webkit-scrollbar {
+    background: #C4C4C4;
+    border-radius: 2px;
+    height:2px;
+}
+     
+.MainReview::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 2px;
+}
+.MainReview::-webkit-scrollbar-button:end:increment {
+    width:290px;
+    display: block;
+    background-color:#ffffff !important;
+    background:#ffffff !important
+  }
+.MainReview::-webkit-scrollbar-button:start:decrement{
+    width:290px;
+    display: block;
+    background-color:#ffffff !important;
+    background:#ffffff !important
+}
