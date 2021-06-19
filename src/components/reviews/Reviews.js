@@ -1,6 +1,6 @@
 import React from "react"
 import * as styles from "./Reviews.module.css"
-
+import Scrollbar from "../scrollbar/Scrollbar"
 const Reviews = () => {
     const ratings =  [1,2,3,4,5].map( (count,idx) => <div key={idx} className={styles.Rating}/>)
     const reviews = [1,2,3,4,5,6,7,8,9].map( (count, idx) => {
@@ -19,24 +19,16 @@ const Reviews = () => {
        )
         }
     )
-    return <div  style={{display:'inline-flex', marginBottom:"60px"}}>
-        {reviews}</div>
+    return <div style={{display:'inline-flex', marginBottom:"80px"}}>{reviews}</div>
 }
 const ReviewContainer = () => {
-    const ref = React.useRef(null);
-
-    const scroll = (scrollOffset) => {
-        ref.current.scrollLeft += scrollOffset;
-      };
+    const currentRef = React.useRef(null);
     return (
     <>
-    <div className={styles.MainReview}  ref={ref}> 
+    <div className={"ScrollbarContainer" + " "+ styles.MainReview}  ref={currentRef}> 
         <Reviews />
     </div>
-    <div className={styles.Test}>
-    <button className={styles.ScrollControl + " " + styles.Left} onClick={() => scroll(-50)}/>
-    <button className={styles.ScrollControl  + " " + styles.Right} onClick={() => scroll(50)}/>
-    </div>
+    <Scrollbar currentRef ={currentRef } />
     </>
     )
 }

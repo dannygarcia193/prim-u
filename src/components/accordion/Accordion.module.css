@@ -1,0 +1,110 @@
+.MainContainer{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0 3.75rem;
+}
+.QAContainer{
+    display: inline-flex;
+    margin-bottom: 60px;
+    flex-direction: column;
+    width: 50%;
+}
+.Question{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;  
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+.Answer{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin-top:30px;
+}
+.QAContainer:nth-child(odd){
+    padding-right:30px;
+}
+.QAContainer:nth-child(even){
+    padding-left:30px;
+}
+button.ShowMore{
+    padding: 11px 118px;
+    background: #FFFFFF;
+    border: 1px solid #683D83;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin:auto;
+    margin-bottom:100px;
+    margin-top:40px;
+}
+button.ShowMore:hover{
+    background-color:var(--primary);
+}
+button:hover .BtnText{
+    color:white;
+}
+.BtnText{
+    font-family: Roboto Condensed;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 37px;
+text-align: center;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+color: #683D83;
+}
+.Heading{
+    display:flex;
+    flex-direction: column;
+}
+.SectionName{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.Underline{
+ width: 221px;
+height: 2px;
+background:#000000;
+margin-bottom:60px;
+margin-top:6px;
+}
+
+summary:hover{
+    cursor: pointer;
+}
+details > summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  details > summary::marker {
+    display: none;
+  }
+  details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
+  details>summary::after {
+    content: ' +';
+  }
+  details[open]>summary::after {
+    content: ' -';
+  }
+  

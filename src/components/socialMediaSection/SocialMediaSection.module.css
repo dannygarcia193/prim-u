@@ -1,0 +1,64 @@
+.Container{
+    display:flex;
+    margin: 0 3.75rem;
+    justify-content: space-between;
+    margin-bottom:100px;
+}
+.Image{
+    width:48%;
+    height:630px;
+    background-image: url("../../images/Rectangle30.svg");
+    border-radius: 20px;
+}
+.Info{
+    width:48%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.Heading{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom:40px;
+}
+.Text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom:60px;
+}
+button.Btn{
+    background: #FFFFFF;
+    border: 1px solid #683D83;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 11px 126px;
+    width:400px;
+}
+
+.BtnText{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #683D83;
+}
+button.Btn:hover{
+    background-color:var(--primary);
+}
+button:hover .BtnText{
+    color:white;
+}

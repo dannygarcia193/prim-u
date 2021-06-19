@@ -1,0 +1,61 @@
+.ProductContainer{
+    width: 400px;
+height: 470px;
+border-radius: 20px;
+margin-right:40px;
+background: #F2F2F2;
+}
+.CTAButton{
+    display:flex;
+    margin:auto;
+    background-color:var(--primary)
+}
+.ButtonText{
+    color: white
+}
+.MainReview{
+    overflow-x: scroll;
+    margin-left:60px;
+    margin-bottom: -10px;
+}
+.ImageContainer{
+    width: 400px;
+height: 220px;
+    background-image: url("../../images/Rectangle26.svg")
+}
+.Name{
+    font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 28px;
+color: #000000;
+margin-bottom:20px;
+}
+.Text{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+color: #5C5C5C;
+margin-bottom:35px;
+}
+.Price{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+color: #FFFFFF;
+}
+.PriceContainer{
+    background: #683D83;
+    border-radius: 5px;
+    padding: 6px 11px;
+}
+.ProductInfo{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 24px;
+}

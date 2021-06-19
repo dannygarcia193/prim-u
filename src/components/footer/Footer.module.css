@@ -1,0 +1,44 @@
+.FooterContainer{
+    display: flex;
+    background-color: black;
+    padding: 0 3.75rem;
+    justify-content: space-between;
+    padding-top:40px;
+}
+.DocumentLinksContainer{
+display:flex;
+flex-direction: column;
+}
+.ContactListContainer{
+    display:flex;
+    flex-direction: column;
+    margin-left: 43.6%;
+}
+.SocialLinksContainer{
+    display:flex;
+    flex-direction: column;
+    margin-left:auto;
+    padding-right: 85px;
+}
+li.LinkItem{
+ list-style: none;  
+ margin-bottom: 10px; 
+}
+.TextLink{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FFFFFF;
+}
+.Heading{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom:20px;
+}

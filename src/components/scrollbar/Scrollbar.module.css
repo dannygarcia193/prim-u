@@ -1,0 +1,32 @@
+.ScrollControl{
+    padding: 10px 10px;
+    background-color:transparent;
+    border:none;
+    z-index:1000000000;
+}
+.ScrollControl:hover{
+    cursor:pointer
+}
+.ScrollControl.Left{
+    background-image:url("../../images/down.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.ScrollControl.Right{
+    background-image:url("../../images/Vector3.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.ScrollContainer{
+    display: inline-flex;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    margin-bottom:80px;
+}

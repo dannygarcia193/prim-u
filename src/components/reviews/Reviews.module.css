@@ -5,7 +5,6 @@
     height: 240px;
     margin-right:40px;
     padding:20px;
-    margin: 0 3.75rem;
     display: inline-flex;
     flex-direction: column;
 }
@@ -44,56 +43,9 @@ height:20px;
     margin-top:26px;
     
 }
-
 .MainReview{
     overflow-x: scroll;
-    margin-bottom: -10px;
-}
-.Test{
-    display: inline-flex;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-    justify-content: space-between;
-    position: absolute;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-}
-.ScrollControl.Left{
-    background-image:url("../../images/down.svg");
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-}
-.ScrollControl.Right{
-    background-image:url("../../images/Vector3.svg");
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-}
-.ScrollControl{
-    padding: 10px 10px;
-    background-color:transparent;
-    border:none;
-}
-.ScrollControl:hover{
-    cursor:pointer
-}
+    margin-left:60px;
+    margin-bottom: -12px;
 
-.MainReview::-webkit-scrollbar {
-    border-radius: 5px;
-    height:4px;
 }
-.MainReview::-webkit-scrollbar-track{
-    background: #C4C4C4;
-    border-radius: 5px;
-}
-.MainReview::-webkit-scrollbar-thumb {
-    background: #000000;
-    border-radius: 5px;
-}
-.MainReview::-webkit-scrollbar-button:end:increment,.MainReview::-webkit-scrollbar-button:start:decrement {
-    width:20%;
-    display: block;
-  }

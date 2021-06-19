@@ -9,6 +9,10 @@ import Services from "../components/gallery/Services"
 import AppSection from "../components/app/App"
 import VideoContainer from "../components/videoSection/Video"
 import ReviewContainer from "../components/reviews/Reviews"
+import ProductContainer from "../components/products/Products"
+import FAQ, {FAQ2} from "../components/accordion/Accordion"
+import SocialMediaSection from "../components/socialMediaSection/SocialMediaSection"
+import Footer from "../components/footer/Footer"
 const IndexPage = () => {
   return (
     <>
@@ -33,6 +37,14 @@ const IndexPage = () => {
     <ReviewContainer/>
     <hr />
     <Header text={"Beauty products"} bold={"for u"} text2={''} />
+    <ProductContainer/>
+    <hr />
+    <Header text={"Frequently asked"} bold={"questions"} text2={''} />  
+    <FAQ /> 
+    <FAQ2 />
+    <hr />
+    <SocialMediaSection/>
+    <Footer />
     </main>
     </>
   )

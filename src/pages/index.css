@@ -94,6 +94,9 @@ body {
   select { 
     text-transform: none;
   }
+  button:hover{
+    cursor: pointer;
+  }
  
   button,
   [type="button"],
@@ -155,4 +158,22 @@ margin-bottom:40px
 }
 button:hover .ButtonText{
   color:white;
+}
+
+
+.ScrollbarContainer::-webkit-scrollbar {
+  border-radius: 5px;
+  height:4px;
+}
+.ScrollbarContainer::-webkit-scrollbar-track{
+  background: #C4C4C4;
+  border-radius: 5px;
+}
+.ScrollbarContainer::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 5px;
+}
+.ScrollbarContainer::-webkit-scrollbar-button:end:increment,.ScrollbarContainer::-webkit-scrollbar-button:start:decrement {
+  width:20%;
+  display: block;
 }
