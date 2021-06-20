@@ -4,7 +4,7 @@ import React from "react"
 const Footer = () =>{
     return (
         <div className={styles.FooterContainer}>
-             <ul className={styles.DocumentLinksContainer}>
+             <ul className={styles.DocumentLinksContainer} role="navigation">
                 <div className={styles.Heading}>PRIM-U APP © 2020</div>    
                 <li className={styles.LinkItem}>
                     <Link className={styles.TextLink} to="/">PRIM-U App</Link>
@@ -19,7 +19,7 @@ const Footer = () =>{
                     <Link className={styles.TextLink} to="/">Prim-U Website Terms of Use</Link>
                 </li>                  
              </ul>
-            <ul className={styles.ContactListContainer}>
+            <ul className={styles.ContactListContainer} role="navigation">
                 <div className={styles.Heading}>CONTACT US</div>    
                 <li className={styles.LinkItem}>
                     <Link className={styles.TextLink} to="/">hello@prim-u.com</Link>
@@ -28,7 +28,7 @@ const Footer = () =>{
                     <Link className={styles.TextLink} to="/">+31-123-45-67</Link>
                 </li>  
             </ul>
-            <ul className={styles.SocialLinksContainer}>
+            <ul className={styles.SocialLinksContainer} role="navigation">
                 <div className={styles.Heading}>FOLLOW US</div>
                 <li className={styles.LinkItem}>
                     <Link className={styles.TextLink} to="/">Facebook</Link>

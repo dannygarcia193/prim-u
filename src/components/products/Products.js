@@ -1,7 +1,6 @@
 import React from "react"
 import * as styles from "./Products.module.css"
-import Scrollbar from "../scrollbar/Scrollbar"
-
+import Carousel from "../carousel/Carousel"
 const Products = () => {
     const products = [1,2,3,4,5,6,7,8,9].map( (count, idx) => {
         return( 
@@ -16,17 +15,14 @@ const Products = () => {
         )
          }
      )
-     return <div style={{display:'inline-flex', marginBottom:"80px"}}>{products}</div>
+     return <div className={styles.MainContainer}>{products}</div>
  }
 
  const ProductContainer = () => {
     const currentRef = React.useRef(null);
     return (
     <>
-    <div className={"ScrollbarContainer" + " "+ styles.MainReview}  ref={currentRef}> 
-        <Products />
-    </div>
-    <Scrollbar currentRef={currentRef}/>
+    <Carousel currentRef={currentRef}><Products/></Carousel>
     <button className={styles.CTAButton + ' ' + 'CTAButton'}>
         <span className={styles.ButtonText+ ' ' + 'ButtonText'}>check out beauty products</span>
     </button>

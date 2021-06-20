@@ -1,9 +1,13 @@
 .ProductContainer{
     width: 400px;
-height: 470px;
+height: 100%;
 border-radius: 20px;
 margin-right:40px;
 background: #F2F2F2;
+}
+.MainContainer{
+    display:inline-flex;
+    margin-bottom:80px;
 }
 .CTAButton{
     display:flex;
@@ -13,15 +17,13 @@ background: #F2F2F2;
 .ButtonText{
     color: white
 }
-.MainReview{
-    overflow-x: scroll;
-    margin-left:60px;
-    margin-bottom: -10px;
-}
+
 .ImageContainer{
-    width: 400px;
-height: 220px;
-    background-image: url("../../images/Rectangle26.svg")
+    width: 100%;
+    height: 220px;
+    background-image: url("../../images/Rectangle26.svg");
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .Name{
     font-family: Roboto;
@@ -58,4 +60,30 @@ color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
     padding: 30px 24px;
+}
+
+@media screen and (max-width:1024px){
+    .ProductContainer{
+        width: 284px;
+        height: 508px;
+        margin-right:20px;
+    }
+    .ProductInfo{
+        padding: 25px 16px;
+    }
+    .Text{
+        margin-bottom: 20px;
+    }
+    .Name{
+        margin-bottom:15px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .MainContainer{
+        margin-bottom:60px;
+    }
+}
+@media screen and (max-width: 640px){
+    .CTAButton{display:none}
 }

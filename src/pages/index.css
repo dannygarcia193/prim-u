@@ -120,20 +120,33 @@ body {
     outline: 1px dotted ButtonText;
   }
 
-  details {
-    display: block;
-  }
-
-  summary {
-    display: list-item;
-  }
-
-@media screen and (max-width:768px){
-  hr{
-      margin-top:60.5px;
-margin-bottom:40px
-  }
+  summary:hover{
+    cursor: pointer;
 }
+details > summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  details > summary::marker {
+    display: none;
+  }
+  details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
+  details>summary::after {
+    content: ' +';
+  }
+  details[open]>summary::after {
+    content: ' -';
+  }
+
+
 
 .CTAButton{
   border-radius: 0.625rem;
@@ -176,4 +189,15 @@ button:hover .ButtonText{
 .ScrollbarContainer::-webkit-scrollbar-button:end:increment,.ScrollbarContainer::-webkit-scrollbar-button:start:decrement {
   width:20%;
   display: block;
+}
+
+@media screen and (max-width:768px){
+  hr{
+      margin-top:60.5px;
+margin-bottom:40px
+  }
+  .ScrollbarContainer{
+    margin:0 20px;
+  }
+  
 }

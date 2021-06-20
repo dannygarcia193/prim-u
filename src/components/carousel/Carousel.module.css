@@ -1,0 +1,10 @@
+.Carousel{
+    overflow-x: scroll;
+    margin-left:60px;
+    margin-bottom: -10px;
+}
+@media screen and (max-width:768px){
+    .Carousel{
+        margin-left:20px;
+    }
+}

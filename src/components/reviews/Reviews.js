@@ -1,6 +1,7 @@
 import React from "react"
 import * as styles from "./Reviews.module.css"
-import Scrollbar from "../scrollbar/Scrollbar"
+import Carousel from "../carousel/Carousel"
+
 const Reviews = () => {
     const ratings =  [1,2,3,4,5].map( (count,idx) => <div key={idx} className={styles.Rating}/>)
     const reviews = [1,2,3,4,5,6,7,8,9].map( (count, idx) => {
@@ -19,18 +20,11 @@ const Reviews = () => {
        )
         }
     )
-    return <div style={{display:'inline-flex', marginBottom:"80px"}}>{reviews}</div>
+    return <div className={styles.MainContainer}>{reviews}</div>
 }
 const ReviewContainer = () => {
     const currentRef = React.useRef(null);
-    return (
-    <>
-    <div className={"ScrollbarContainer" + " "+ styles.MainReview}  ref={currentRef}> 
-        <Reviews />
-    </div>
-    <Scrollbar currentRef ={currentRef } />
-    </>
-    )
+    return <Carousel currentRef={currentRef}><Reviews /></Carousel>
 }
 
 export default ReviewContainer

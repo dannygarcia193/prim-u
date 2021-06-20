@@ -43,6 +43,8 @@ button.ShowMore{
     margin:auto;
     margin-bottom:100px;
     margin-top:40px;
+    display: flex;
+    justify-content: center;
 }
 button.ShowMore:hover{
     background-color:var(--primary);
@@ -50,16 +52,17 @@ button.ShowMore:hover{
 button:hover .BtnText{
     color:white;
 }
+
 .BtnText{
     font-family: Roboto Condensed;
-font-style: normal;
-font-weight: bold;
-font-size: 32px;
-line-height: 37px;
-text-align: center;
-letter-spacing: -0.01em;
-text-transform: uppercase;
-color: #683D83;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #683D83;
 }
 .Heading{
     display:flex;
@@ -83,28 +86,31 @@ margin-bottom:60px;
 margin-top:6px;
 }
 
-summary:hover{
-    cursor: pointer;
-}
-details > summary {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+  @media screen and (max-width:640px){
+      .MainContainer{
+          margin: 0 20px;
+      }
+      .QAContainer{
+          width:100%;
+          margin-bottom:40px;
+      }
+      .QAContainer:nth-child(even){
+          padding:0;
+      }
+      .QAContainer:nth-child(odd){
+          padding:0;
+      }
+     button.ShowMore{
+        margin-top:20px;
+        margin-bottom:80px;
+        width:100%;
+        padding:11px;
+     }
+     .Question{
+        font-size:24px;
+        line-height:28px;
+     }
+     .Answer{
+        margin-top:20px;
+     }
   }
-  details > summary::marker {
-    display: none;
-  }
-  details[open] summary ~ * {
-    animation: sweep .5s ease-in-out;
-  }
-  @keyframes sweep {
-    0%    {opacity: 0; margin-left: -10px}
-    100%  {opacity: 1; margin-left: 0px}
-  }
-  details>summary::after {
-    content: ' +';
-  }
-  details[open]>summary::after {
-    content: ' -';
-  }
-  

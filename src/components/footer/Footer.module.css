@@ -4,6 +4,7 @@
     padding: 0 3.75rem;
     justify-content: space-between;
     padding-top:40px;
+    padding-bottom:60px;
 }
 .DocumentLinksContainer{
 display:flex;
@@ -12,13 +13,15 @@ flex-direction: column;
 .ContactListContainer{
     display:flex;
     flex-direction: column;
-    margin-left: 43.6%;
+    margin-left:auto;
+    width: 18.33%;
+    margin-right: 60px;
 }
 .SocialLinksContainer{
     display:flex;
     flex-direction: column;
-    margin-left:auto;
-    padding-right: 85px;
+    width: 18.32%;
+    
 }
 li.LinkItem{
  list-style: none;  
@@ -30,8 +33,8 @@ li.LinkItem{
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    
     color: #FFFFFF;
+    text-decoration:none;
 }
 .Heading{
     font-family: Roboto Condensed;
@@ -41,4 +44,44 @@ li.LinkItem{
     line-height: 28px;
     color: #FFFFFF;
     margin-bottom:20px;
+}
+@media screen and (max-width:1024px) {
+    .SocialLinksContainer{
+        margin-left: 0; 
+        padding-right: 0;
+    }
+    .ContactListContainer{
+        margin-right: 40px;
+    }
+    .FooterContainer{
+        padding:40px;
+    }
+}
+@media screen and (max-width:640px){
+    .FooterContainer{
+        flex-direction: column;
+        padding: 0 20px;
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    .DocumentLinksContainer{
+    align-items: center;
+    padding-bottom:60px;
+    }
+    .ContactListContainer{
+        margin-left:0;
+        padding-right:0;
+        align-items: center;
+        padding-bottom:60px;
+        width:100%
+    }
+    .SocialLinksContainer{
+        margin-left:0;
+        padding-right:0;
+        align-items: center;
+        width:100%
+    }
+    .FooterContainer li.LinkItem:last-child, .DocumentLinksContainer li.LinkItem:last-child, .SocialLinksContainer li.LinkItem:last-child{
+        margin-bottom:0;
+    }
 }

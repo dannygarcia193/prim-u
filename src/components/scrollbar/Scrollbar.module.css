@@ -30,3 +30,9 @@
     align-items: center;
     margin-bottom:80px;
 }
+@media screen  and (max-width:640px) {
+   .ScrollContainer{
+        margin-bottom:0px;
+   }
+}
+

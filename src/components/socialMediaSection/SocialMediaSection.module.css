@@ -6,9 +6,12 @@
 }
 .Image{
     width:48%;
-    height:630px;
+    height:48vh;
     background-image: url("../../images/Rectangle30.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 20px;
+
 }
 .Info{
     width:48%;
@@ -38,6 +41,9 @@
     margin-bottom:60px;
 }
 button.Btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background: #FFFFFF;
     border: 1px solid #683D83;
     box-sizing: border-box;
@@ -61,4 +67,50 @@ button.Btn:hover{
 }
 button:hover .BtnText{
     color:white;
+}
+.PrimaryText{
+    color:var(--primary)
+}
+@media screen and (min-width: 768px) and (max-width:1200px){
+   .Image{
+        height: 35vh;
+   }
+}
+@media screen and (max-width: 1024px){
+    button.Btn{
+        width:300px;
+    }
+}
+@media screen and (max-width: 768px){
+    .Container{
+        flex-direction: column;
+        margin: 0 20px;
+        margin-bottom:80px;
+    }
+    .Info{
+        width:100%;
+    }
+    .Image{
+        width:100%;
+        margin-bottom:40px;
+    }
+
+    .Heading{
+        font-size: 34px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+    .Text{
+        font-size: 18px;
+        margin-bottom:30px;
+    }
+    .BtnText{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    button.Btn{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width:100%;
+    }
 }

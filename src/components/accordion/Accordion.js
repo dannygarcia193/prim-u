@@ -44,7 +44,7 @@ const Accordion = ({questions, answers}) => {
 const Heading=  ({heading}) =>{
     return(
     <div className={styles.Heading}>
-        <h2 className={styles.SectionName}>{heading}</h2><div className={styles.Underline}/>
+        <h3 className={styles.SectionName}>{heading}</h3><div className={styles.Underline}/>
     </div>
     )
 }
@@ -62,7 +62,7 @@ export const FAQ2 = () =>{
     <div className={styles.MainContainer}>
         <Heading heading={"for Partners"}/>
         <Accordion questions={questions2} answers={answers}/>
-        <button className={styles.ShowMore} style={{marginBottom: 0}}><span className={styles.BtnText}>show more</span></button>
+        <button className={styles.ShowMore} style={{marginBottom:0}}><span className={styles.BtnText}>show more</span></button>
     </div>      
     )
 }
