@@ -3,10 +3,12 @@
     display:flex;
     background-color: var(--primary);
     width:100%;
-    height: 752px;
+    height:100%;
     margin-top:100px;
     padding-left:60px;
     padding-right:60px;
+    padding-bottom:85px;
+    padding-top:85px;
     margin-bottom:100px;
 }
 .ImageSection{
@@ -14,9 +16,9 @@
     height: 570px;
     background-color:white;
     margin-left: 16%;
+    border-radius: 50px;
     margin-top: auto;
     margin-bottom: auto;
-    border-radius: 50px;
 }
 
 .Title{
@@ -28,7 +30,6 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
     margin-bottom: 32px;
-    margin-top:100px;
     color: #FFFFFF;
 }
 
@@ -48,8 +49,12 @@
 .AppLogo{
     margin-top:28px
 }
+.AppLogo:hover{
+    cursor: pointer;
+    transition: all .2s;
+    transform: scale(1.1)
+}
 .AppLogo:last-child{
- 
     margin-left: 20.34px;
 }
 .TextContainer > p:last-child{
@@ -63,6 +68,7 @@
     .AppSection{
         padding-left: 40px;
         padding-right: 40px;
+        padding-top:100px;
     }
     .ImageSection{
         margin-left: 90px;
@@ -75,9 +81,8 @@
     .ImageSection{
         width:100%;
         padding:0;
-        height:478px;
-        margin: 60px auto;
-        
+        margin:auto;  
+        margin-bottom: 60px;
     }
     .TextContainer{
         width:100%;
@@ -85,11 +90,11 @@
         margin:0;
     }
     .AppSection{
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 60px 20px;
         flex-direction: column-reverse;
-        height:1387px;
         justify-content: flex-end;
+        margin-top: 80px;
+        margin-bottom:80px;
     }
     .Title{
         margin-top:0;
@@ -100,5 +105,11 @@
     }
     .TextContainer > p:last-child{
         margin-bottom:50px!important;
+    }
+}
+@media screen and (max-width:640px){
+    .AppSection{
+        padding-left:10px;
+        padding-right:10px;
     }
 }

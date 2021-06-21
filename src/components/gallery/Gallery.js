@@ -8,18 +8,18 @@ const Gallery = () =>{
         return (
             <div key={idx} className={styles.ImageContainer + ' '+ styles.Regular}>
                 <div className={styles.Overlay}>
-                <p className={styles.Service}>{ServicesText[idx]}</p>
+                    <p className={styles.Service}>{ServicesText[idx]}</p>
                 </div>
             </div>
         )
     })
     return(
         <>
-        <div className={styles.ExtraSpace} />
-        <Header text={"treat yourself with"} bold={"our services"} text2={''}/>
-        <div className={styles.Gallery}>
-            {image}
-        </div>
+            <div className={styles.ExtraSpace} id="MAKE-A-BOOKING" />
+            <Header text={"treat yourself with"} bold={"our services"} text2={''}/>
+            <div className={styles.Gallery}>
+                {image}
+            </div>
         </>
     )
 }

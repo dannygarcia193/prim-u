@@ -8,13 +8,13 @@ const LinkContainer = () => {
     return (
         <ul className={styles.NavLinkContainer}>
             <li className={styles.NavItem}>
-                <Link className={styles.NavLink} to="/">MAKE A BOOKING</Link>
+                <Link className={styles.NavLink} to="#MAKE-A-BOOKING">MAKE A BOOKING</Link>
             </li>
             <li className={styles.NavItem}>
-                <Link className={styles.NavLink} to="#work-with-us">WORK WITH US</Link>
+                <Link className={styles.NavLink} to="#WORK-WITH-US">WORK WITH US</Link>
             </li>
             <li className={styles.NavItem}>
-                <Link className={styles.NavLink} to="/">FAQ</Link>
+                <Link className={styles.NavLink} to="#FAQ">FAQ</Link>
             </li>
         </ul>
     )

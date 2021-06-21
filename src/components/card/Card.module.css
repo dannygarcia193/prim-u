@@ -6,7 +6,6 @@
 }
 .CardContainer{
     border-radius: 1.25rem;
-    margin: 0 3.75rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../../images/customer.jpg");
@@ -47,7 +46,9 @@
     font-weight: normal;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    color:var(--white)
+    color:var(--white);
+    word-wrap: break-word;
+    word-break: break-word;
 }
 .DescriptionContainer{
     display: flex;
@@ -132,7 +133,6 @@
         line-height: 24px;
     }
     .CardContainer{
-        margin: 0 0.625rem;
         background-image: url("../../images/customerMobile.jpg");
     }
     .Large.CardContainer{

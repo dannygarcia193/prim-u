@@ -22,7 +22,7 @@ const Products = () => {
     const currentRef = React.useRef(null);
     return (
     <>
-    <Carousel currentRef={currentRef}><Products/></Carousel>
+    <Carousel currentRef={currentRef} idx={"Products"}><Products/></Carousel>
     <button className={styles.CTAButton + ' ' + 'CTAButton'}>
         <span className={styles.ButtonText+ ' ' + 'ButtonText'}>check out beauty products</span>
     </button>

@@ -2,7 +2,7 @@
     background: #F2F2F2;
     border-radius: 20px;
     width: 520px;
-    height: 240px;
+    height: 100%;
     margin-right:40px;
     padding:20px;
     display: inline-flex;
@@ -15,16 +15,17 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 28px;
-    /* identical to box height, or 156% */
     color: #000000;
+    word-break: break-word;
+    word-wrap: break-word;
 }
 .RatingContainer{
     display:flex;
 }
 .Rating{
-background-image: url("../../images/star.svg");
-width:20px;
-height:20px;
+    background-image: url("../../images/star.svg");
+    width:20px;
+    height:20px;
 }
 .Info{
     display: flex;
@@ -38,7 +39,6 @@ height:20px;
     font-weight: normal;
     font-size: 18px;
     line-height: 28px;
-    /* or 156% */ 
     color: #5C5C5C;
     margin-top:26px;
     
@@ -56,5 +56,9 @@ height:20px;
 @media screen and (max-width:768px){
     .MainContainer{
         margin-bottom:60px;
+    }
+    .ReviewContainer{
+        width: 355px;
+        margin-right:20px;
     }
 }

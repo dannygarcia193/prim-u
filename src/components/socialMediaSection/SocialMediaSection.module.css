@@ -1,6 +1,5 @@
 .Container{
     display:flex;
-    margin: 0 3.75rem;
     justify-content: space-between;
     margin-bottom:100px;
 }
@@ -11,6 +10,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
+    margin-top:auto;
+    margin-bottom: auto;
 
 }
 .Info{
@@ -84,7 +85,6 @@ button:hover .BtnText{
 @media screen and (max-width: 768px){
     .Container{
         flex-direction: column;
-        margin: 0 20px;
         margin-bottom:80px;
     }
     .Info{

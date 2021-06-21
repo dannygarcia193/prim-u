@@ -24,7 +24,7 @@ const Reviews = () => {
 }
 const ReviewContainer = () => {
     const currentRef = React.useRef(null);
-    return <Carousel currentRef={currentRef}><Reviews /></Carousel>
+    return <Carousel idx={"Reviews"} currentRef={currentRef}><Reviews /></Carousel>
 }
 
 export default ReviewContainer

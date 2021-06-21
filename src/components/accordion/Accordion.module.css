@@ -1,7 +1,6 @@
 .MainContainer{
     display:flex;
     flex-wrap: wrap;
-    margin: 0 3.75rem;
 }
 .QAContainer{
     display: inline-flex;
@@ -54,15 +53,15 @@ button:hover .BtnText{
 }
 
 .BtnText{
-    font-family: Roboto Condensed;
+    font-family: var(--robotoCondensed);
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 37px;
     text-align: center;
     letter-spacing: -0.01em;
+    color:var(--primary);
     text-transform: uppercase;
-    color: #683D83;
 }
 .Heading{
     display:flex;
@@ -87,9 +86,6 @@ margin-top:6px;
 }
 
   @media screen and (max-width:640px){
-      .MainContainer{
-          margin: 0 20px;
-      }
       .QAContainer{
           width:100%;
           margin-bottom:40px;

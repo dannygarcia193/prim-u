@@ -20,6 +20,7 @@ const IndexPage = () => {
     <main>
       <title>Prim-U</title>
       <Hero />
+    <div className="MarginContainer">
       <Card small={false} />
       <Gallery/>
       <hr  />
@@ -30,20 +31,23 @@ const IndexPage = () => {
       <hr  />
       <Header text={"For those who provide"} bold={"beauty services"} text2={''} />
     <Services/>
+    </div>
     <AppSection/>
-    <VideoContainer />
-    <hr />
-    <Header text={"What our"} bold={"customers"} text2={'say'} />
-    <ReviewContainer/>
-    <hr />
-    <Header text={"Beauty products"} bold={"for u"} text2={''} />
-    <ProductContainer/>
-    <hr />
-    <Header text={"Frequently asked"} bold={"questions"} text2={''} />  
-    <FAQ /> 
-    <FAQ2 />
-    <hr />
-    <SocialMediaSection/>
+    <div className="MarginContainer">
+        <VideoContainer />
+        <hr />
+        <Header text={"What our"} bold={"customers"} text2={'say'} />
+        <ReviewContainer/>
+        <hr />
+        <Header text={"Beauty products"} bold={"for u"} text2={''} />
+        <ProductContainer/>
+        <hr />
+        <Header text={"Frequently asked"} bold={"questions"} text2={''} />  
+        <FAQ /> 
+        <FAQ2 />
+        <hr />
+        <SocialMediaSection/>
+    </div>
     <Footer />
     </main>
     </>

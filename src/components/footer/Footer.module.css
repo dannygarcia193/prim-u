@@ -36,6 +36,9 @@ li.LinkItem{
     color: #FFFFFF;
     text-decoration:none;
 }
+.TextLink:hover{
+    color:var(--primary)
+}
 .Heading{
     font-family: Roboto Condensed;
     font-style: normal;

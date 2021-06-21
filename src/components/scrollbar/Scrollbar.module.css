@@ -2,7 +2,7 @@
     padding: 10px 10px;
     background-color:transparent;
     border:none;
-    z-index:1000000000;
+    z-index: 1000;
 }
 .ScrollControl:hover{
     cursor:pointer
@@ -13,6 +13,14 @@
     background-repeat: no-repeat;
     background-position-x: center;
 }
+
+button.ScrollControl.Left:disabled,
+button.ScrollControl.Left[disabled],button.ScrollControl.Right:disabled,
+button.ScrollControl.Right[disabled]{
+    cursor:unset;
+    color:gray;
+    opacity:.5;
+}
 .ScrollControl.Right{
     background-image:url("../../images/Vector3.svg");
     background-size:contain;
@@ -21,18 +29,30 @@
 }
 .ScrollContainer{
     display: inline-flex;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
     margin-bottom:80px;
 }
+
+
+@media screen and (max-width:1024px){
+    .ScrollContainer{
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
+    }
+}
 @media screen  and (max-width:640px) {
    .ScrollContainer{
         margin-bottom:0px;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%
    }
 }
 

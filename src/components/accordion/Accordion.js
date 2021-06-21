@@ -50,7 +50,7 @@ const Heading=  ({heading}) =>{
 }
 const FAQ = () => {
     return(
-        <div className={styles.MainContainer}>
+        <div className={styles.MainContainer} id="FAQ">
             <Heading heading={"for customers"}/>
             <Accordion questions={questions} answers={answers}/>
             <button className={styles.ShowMore}><span className={styles.BtnText}>show more</span></button>

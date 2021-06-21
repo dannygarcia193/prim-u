@@ -3,7 +3,7 @@ import React from "react"
 const Services  = () => {
     return (
     <>
-    <div className={styles.Gallery}>
+    <div className={styles.Gallery} id="WORK-WITH-US">
         <div className={styles.CustomContainer}>
             <div className={styles.ImageContainer + " "+ styles.Custom}>
                 <div className={styles.Overlay}>

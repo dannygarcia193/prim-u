@@ -19,6 +19,8 @@
     
   }
   html {
+  max-width: 2000px;
+  margin:auto;
   box-sizing: border-box;
   font-size:16px;
   line-height: 1;  
@@ -147,7 +149,6 @@ details > summary {
   }
 
 
-
 .CTAButton{
   border-radius: 0.625rem;
   padding: 1rem 1.875rem;
@@ -187,17 +188,32 @@ button:hover .ButtonText{
   border-radius: 5px;
 }
 .ScrollbarContainer::-webkit-scrollbar-button:end:increment,.ScrollbarContainer::-webkit-scrollbar-button:start:decrement {
-  width:20%;
+  width:17.5%;
   display: block;
 }
-
-@media screen and (max-width:768px){
+.MarginContainer{
+  margin: 0 3.75rem;
+}
+@media screen and (max-width:1024px){
   hr{
       margin-top:60.5px;
 margin-bottom:40px
   }
-  .ScrollbarContainer{
-    margin:0 20px;
+  .MarginContainer{
+    margin: 0 40px;
   }
-  
+}
+@media screen and (max-width:768px){
+  .MarginContainer{
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width:640px){
+  .ScrollbarContainer::-webkit-scrollbar-button:end:increment,.ScrollbarContainer::-webkit-scrollbar-button:start:decrement {
+    width:10%;
+  }
+  .MarginContainer{
+    margin: 0 10px;
+  }
 }
