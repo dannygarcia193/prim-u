@@ -3,8 +3,6 @@ import React from "react"
 import Header from "../header/Header"
 import { useStaticQuery, graphql } from "gatsby"
 
-const ServicesText = ["massage", "WAXING", "make up", "manicure", "hair", "male grooming"]
-const ServicesImage = ["image2.svg","image3.svg", "Rectangle8.svg", "image4.svg","image5.svg","image6.svg"]
 const Gallery = () =>{
     const data = useStaticQuery(graphql`
     {

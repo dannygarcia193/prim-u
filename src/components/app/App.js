@@ -29,12 +29,12 @@ const AppSection = () => {
         <div className={styles.AppSection}>
             <div className={styles.TextContainer}>
                 <h2 className={styles.Title}>we have an app for u</h2>
-                {data.description.description.split('\n\n').map(paragraph => <p className={styles.Text}>{paragraph}</p> )}
+                {data.description.description.split('\n\n').map((paragraph,idx) => <p key={idx} className={styles.Text}>{paragraph}</p> )}
                 <a href={data.appStoreLink} target="_blank" rel="noopener noreferrer" >
-                    <StaticImage className={styles.AppLogo} src="../../images/appStore.svg" />
+                    <StaticImage className={styles.AppLogo} src="../../images/appStore.svg" alt="Apple store download logo" />
                 </a>
                 <a href={data.googlePlayLink} target="_blank" rel="noopener noreferrer" >
-                    <StaticImage className={styles.AppLogo} src="../../images/googleApp.svg" />
+                    <StaticImage className={styles.AppLogo} src="../../images/googleApp.svg" alt="Google play download logo" />
                 </a>
             </div>
         <div className={styles.ImageSection} style ={{backgroundImage: `url(${"https:" + data.image.fluid.srcWebp})`}} />

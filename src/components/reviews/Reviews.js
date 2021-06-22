@@ -20,11 +20,10 @@ const Reviews = () => {
       }
     }
   `).allContentfulReviews.edges
-    console.log(data)
     const reviews = data.map( ({node}) => {
         const items = []
         for (let i = 0; i < node.rating; i++){
-            items.push(<Star />)
+            items.push(<Star key={i}/>)
         }
        return( 
        <div key={node.id} className={styles.ReviewContainer}>
@@ -35,7 +34,7 @@ const Reviews = () => {
                 </div>
             </div>
             <div className={styles.Review}>
-                {node.review.review.split('\n\n').map(paragraph => <p className={styles.Text}>{paragraph}</p> )}
+                {node.review.review.split('\n\n').map((paragraph,idx) => <p key={idx} className={styles.Review}>{paragraph}</p> )}
             </div>
         </div>
        )})

@@ -36,7 +36,7 @@ const Services  = () => {
             </a>
             </div>
         </div>
-        {node.description.description.split('\n\n').map(paragraph => <p className={styles.Text}>{paragraph}</p> )}
+        {node.description.description.split('\n\n').map((paragraph,idx) => <p key={idx} className={styles.Text}>{paragraph}</p> )}
     </div>
     )
   })

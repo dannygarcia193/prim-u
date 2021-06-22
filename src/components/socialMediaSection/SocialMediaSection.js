@@ -21,13 +21,13 @@ const SocialMediaSection = () =>{
       }
     }
   `).contentfulSocialMediaSubscriptionSection
-  console.log(data)
+
     return(
         <div className={styles.Container}>
             <div className={styles.Image} style ={{backgroundImage: `url(${"https:" + data.image.fluid.srcWebp})`}} />
             <div className={styles.Info}>
                 <h3 className={styles.Heading}>We post interesting stuff on our <span className={styles.PrimaryText}>instagram</span></h3>
-                {data.description.description.split('\n').map(paragraph => paragraph !== '' ? <p className={styles.Text}>{paragraph}</p> : ' ')}
+                {data.description.description.split('\n').map((paragraph,idx) => paragraph !== '' ? <p key={idx} className={styles.Text}>{paragraph}</p> : ' ')}
                 <a href={data.callToActionLink} target="_blank" rel="noopener noreferrer">
                     <button className={styles.Btn}><span className={styles.BtnText}>{data.callToAction}</span></button>
                 </a>

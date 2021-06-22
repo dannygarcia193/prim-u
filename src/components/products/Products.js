@@ -9,6 +9,7 @@ const Products = () => {
       allContentfulProducts {
         edges {
           node {
+            id
             image {
               fluid {
                 srcWebp
@@ -31,7 +32,7 @@ const Products = () => {
             <div className={styles.ImageContainer} style ={{backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`}}/>
             <div className={styles.ProductInfo}>
                 <div className={styles.Name}>{node.image.title}</div>
-                {node.description.description.split('\n\n').map(paragraph => <p className={styles.Text}>{paragraph}</p> )}
+                {node.description.description.split('\n\n').map((paragraph,idx) => <p key={idx} className={styles.Text}>{paragraph}</p> )}
                 <a href={node.priceLink} target="_blank" rel="noopener noreferrer">
                     <div className={styles.PriceContainer}><span className={styles.Price}>{node.price}</span></div>
                 </a>

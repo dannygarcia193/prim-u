@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import * as styles from "./Accordion.module.css"
 import Accordion,{Heading} from "./Accordion"
-const FAQ = ({data}) => {
+const Faq = ({data}) => {
     return(
         <div className={styles.MainContainer} id="FAQ">
             <Heading heading={"for customers"}/>
@@ -11,7 +11,7 @@ const FAQ = ({data}) => {
         </div>
     )
 }
-const FAQ2 = ({data}) =>{
+const Faq2 = ({data}) =>{
     return(
     <div className={styles.MainContainer}>
         <Heading heading={"for Partners"}/>
@@ -46,8 +46,8 @@ const FAQContainer = () =>{
      })
     return (
         <>
-        <FAQ  data={items} />
-        <FAQ2  data={items}/>
+        <Faq data={items} />
+        <Faq2  data={items}/>
         </>
     )
 
