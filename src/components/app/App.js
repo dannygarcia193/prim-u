@@ -37,14 +37,14 @@ const AppSection = () => {
         <a href={data.appStoreLink} target="_blank" rel="noopener noreferrer">
           <StaticImage
             className={styles.AppLogo}
-            src="../../images/appStore.svg"
+            src="../../images/appStoreLogo.svg"
             alt="Apple store download logo"
           />
         </a>
         <a href={data.googlePlayLink} target="_blank" rel="noopener noreferrer">
           <StaticImage
             className={styles.AppLogo}
-            src="../../images/googleApp.svg"
+            src="../../images/googlePlayLogo.svg"
             alt="Google play download logo"
           />
         </a>

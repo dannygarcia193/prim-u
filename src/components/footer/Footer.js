@@ -71,7 +71,7 @@ const Footer = () => {
         <li className={styles.LinkItem}>
           <a
             className={styles.TextLink}
-            href={data.email}
+            href={"mailto:" + data.email}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -81,7 +81,7 @@ const Footer = () => {
         <li className={styles.LinkItem}>
           <a
             className={styles.TextLink}
-            href={data.phoneNumber}
+            href={"tel:" + data.phoneNumber}
             target="_blank"
             rel="noopener noreferrer"
           >
