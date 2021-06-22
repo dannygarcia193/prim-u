@@ -22,11 +22,7 @@
 .RatingContainer{
     display:flex;
 }
-.Rating{
-    background-image: url("../../images/star.svg");
-    width:20px;
-    height:20px;
-}
+
 .Info{
     display: flex;
     justify-content: space-between;

@@ -2,7 +2,7 @@ import React from "react"
 import * as styles from "./Reviews.module.css"
 import Carousel from "../carousel/Carousel"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Star from "./Star"
 const Reviews = () => {
     const data = useStaticQuery(graphql`
     {
@@ -24,7 +24,7 @@ const Reviews = () => {
     const reviews = data.map( ({node}) => {
         const items = []
         for (let i = 0; i < node.rating; i++){
-            items.push(<div className={styles.Rating} />)
+            items.push(<Star />)
         }
        return( 
        <div key={node.id} className={styles.ReviewContainer}>

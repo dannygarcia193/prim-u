@@ -21,7 +21,7 @@ const VideoContainer = () =>{
         <>
         <Header text={""} bold={"Primlancers"} text2={'at work'} />
         
-        <div className={styles.Placeholder}>
+        <div className={styles.Placeholder} >
             <div className={styles.Overlay}>
                 <a  href={data.videoUrl} target="_blank" rel="noopener noreferrer">
                     <div className={styles.VideoControl} />

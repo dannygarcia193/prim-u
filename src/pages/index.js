@@ -14,14 +14,22 @@ import FAQContainer from "../components/accordion/FAQContainer"
 import SocialMediaSection from "../components/socialMediaSection/SocialMediaSection"
 import Footer from "../components/footer/Footer"
 import ForMoreThanJustU from "../components/card/ForMoreThanJustU"
+import { useStaticQuery, graphql } from "gatsby"
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+  {
+    contentfulMainSection {
+      siteTitle
+    }
+  }
+`).contentfulMainSection
   
   return (
     <>
     <Navbar />
     <main>
-      <title>Prim-U</title>
+      <title>{data.siteTitle}</title>
       <Hero />
     <div className="MarginContainer">
       <ForCustomers />

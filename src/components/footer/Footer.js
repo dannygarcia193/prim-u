@@ -1,5 +1,5 @@
 import * as styles from "./Footer.module.css"
-import { Link } from 'gatsby'
+import { a } from 'gatsby'
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -26,43 +26,43 @@ const Footer = () =>{
              <ul className={styles.DocumentLinksContainer} role="navigation">
                 <div className={styles.Heading}>PRIM-U APP © 2020</div>    
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink} to={data.appLink} target="_blank" rel="noopener noreferrer">PRIM-U App</Link>
+                    <a className={styles.TextLink} to={data.appLink} target="_blank" rel="noopener noreferrer">PRIM-U App</a>
                 </li>
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink} to={data.privacyPolicyLink} target="_blank" rel="noopener noreferrer">PRIM-U Privacy Policy</Link>
+                    <a className={styles.TextLink} to={data.privacyPolicyLink} target="_blank" rel="noopener noreferrer">PRIM-U Privacy Policy</a>
                 </li>
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink} to={data.ugcPolicyLink} target="_blank" rel="noopener noreferrer">Prim-U User Generated Content Policy</Link>
+                    <a className={styles.TextLink} to={data.ugcPolicyLink} target="_blank" rel="noopener noreferrer">Prim-U User Generated Content Policy</a>
                 </li>
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink}  to={data.termsOfUseLink} target="_blank" rel="noopener noreferrer">Prim-U Website Terms of Use</Link>
+                    <a className={styles.TextLink}  to={data.termsOfUseLink} target="_blank" rel="noopener noreferrer">Prim-U Website Terms of Use</a>
                 </li>                  
              </ul>
             <ul className={styles.ContactListContainer} role="navigation">
                 <div className={styles.Heading}>CONTACT US</div>    
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink}  to={data.email} target="_blank" rel="noopener noreferrer">hello@prim-u.com</Link>
+                    <a className={styles.TextLink}  to={data.email} target="_blank" rel="noopener noreferrer">hello@prim-u.com</a>
                 </li>  
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink}  to={data.phoneNumber} target="_blank" rel="noopener noreferrer">+31-123-45-67</Link>
+                    <a className={styles.TextLink}  to={data.phoneNumber} target="_blank" rel="noopener noreferrer">+31-123-45-67</a>
                 </li>  
             </ul>
             <ul className={styles.SocialLinksContainer} role="navigation">
                 <div className={styles.Heading}>FOLLOW US</div>
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink}  to={data.facebookLink} target="_blank" rel="noopener noreferrer">Facebook</Link>
+                    <a className={styles.TextLink}  to={data.facebookLink} target="_blank" rel="noopener noreferrer">Facebook</a>
                 </li>  
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink}  to={data.twitterLink} target="_blank" rel="noopener noreferrer">Twitter</Link>
+                    <a className={styles.TextLink}  to={data.twitterLink} target="_blank" rel="noopener noreferrer">Twitter</a>
                 </li>  
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink}  to={data.linkedinLink} target="_blank" rel="noopener noreferrer">LinkedIn</Link>
+                    <a className={styles.TextLink}  to={data.linkedinLink} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </li>  
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink} to={data.youTubeLink} target="_blank" rel="noopener noreferrer">YouTube</Link>
+                    <a className={styles.TextLink} to={data.youTubeLink} target="_blank" rel="noopener noreferrer">YouTube</a>
                 </li>  
                 <li className={styles.LinkItem}>
-                    <Link className={styles.TextLink} to={data.instagramLink} target="_blank" rel="noopener noreferrer">Instagram</Link>
+                    <a className={styles.TextLink} to={data.instagramLink} target="_blank" rel="noopener noreferrer">Instagram</a>
                 </li>  
             </ul>
         </div>
