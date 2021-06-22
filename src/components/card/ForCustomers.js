@@ -1,9 +1,9 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Card from "./Card"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Card from "./Card";
 
 const ForCustomers = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
       allContentfulForCustomersSection {
         edges {
@@ -24,9 +24,9 @@ const ForCustomers = () => {
         }
       }
     }
-  `)
-  const items = data.allContentfulForCustomersSection.edges
-    return <Card small={false} data={items}/>
-}
+  `);
+  const items = data.allContentfulForCustomersSection.edges;
+  return <Card small={false} data={items} />;
+};
 
-export default ForCustomers
+export default ForCustomers;

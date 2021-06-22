@@ -1,116 +1,115 @@
-
-.AppSection{
-    display:flex;
-    background-color: var(--primary);
-    width:100%;
-    height:100%;
-    margin-top:100px;
-    padding-left:60px;
-    padding-right:60px;
-    padding-bottom:85px;
-    padding-top:85px;
-    margin-bottom:100px;
+.AppSection {
+  display: flex;
+  background-color: var(--primary);
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 85px;
+  padding-top: 85px;
+  margin-bottom: 100px;
 }
-.ImageSection{
-    width: 22.75%;
-    height: 570px;
-    background-size:cover;
-    background-repeat: no-repeat;
-    margin-left: 16%;
-    border-radius: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.Title{
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 59px;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    color: #FFFFFF;
+.ImageSection {
+  width: 22.75%;
+  height: 570px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 16%;
+  border-radius: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.Text{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 32px;
-    color: #FFFFFF;
+.Title {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: #ffffff;
 }
 
-.TextContainer{
-    width:48%;
-}
-.AppLogo{
-    margin-top:28px
-}
-.AppLogo:hover{
-    cursor: pointer;
-    transition: all .2s;
-    transform: scale(1.1)
-}
-.AppLogo:last-child{
-    margin-left: 20.34px;
-}
-.TextContainer > p:last-child{
-    margin-bottom:60px!important;
+.Text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 32px;
+  color: #ffffff;
 }
 
-@media screen and (max-width:1024px){
-    .TextContainer{
-        width: 64.1%;
-    }
-    .AppSection{
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top:100px;
-    }
-    .ImageSection{
-        margin-left: 90px;
-        height:478.28px;
-        width: 26.5%;
-    }
+.TextContainer {
+  width: 48%;
+}
+.AppLogo {
+  margin-top: 28px;
+}
+.AppLogo:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(1.1);
+}
+.AppLogo:last-child {
+  margin-left: 20.34px;
+}
+.TextContainer > p:last-child {
+  margin-bottom: 60px !important;
 }
 
-@media screen and (max-width:768px){
-    .ImageSection{
-        width:100%;
-        padding:0;
-        margin:auto;  
-        margin-bottom: 60px;
-    }
-    .TextContainer{
-        width:100%;
-        padding:0;
-        margin:0;
-    }
-    .AppSection{
-        padding: 60px 20px;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        margin-top: 80px;
-        margin-bottom:80px;
-    }
-    .Title{
-        margin-top:0;
-        margin-bottom: 30px;
-    }
-    .Text{
-        margin-bottom:30px;
-    }
-    .TextContainer > p:last-child{
-        margin-bottom:50px!important;
-    }
+@media screen and (max-width: 1024px) {
+  .TextContainer {
+    width: 64.1%;
+  }
+  .AppSection {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 100px;
+  }
+  .ImageSection {
+    margin-left: 90px;
+    height: 478.28px;
+    width: 26.5%;
+  }
 }
-@media screen and (max-width:640px){
-    .AppSection{
-        padding-left:10px;
-        padding-right:10px;
-    }
+
+@media screen and (max-width: 768px) {
+  .ImageSection {
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 60px;
+  }
+  .TextContainer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .AppSection {
+    padding: 60px 20px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .Title {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .Text {
+    margin-bottom: 30px;
+  }
+  .TextContainer > p:last-child {
+    margin-bottom: 50px !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .AppSection {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

@@ -1,162 +1,160 @@
-
-.Card{
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 1.25rem;
-    display:flex;
+.Card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1.25rem;
+  display: flex;
 }
-.CardContainer{
-    border-radius: 1.25rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom:60px;
+.CardContainer {
+  border-radius: 1.25rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
 }
 
-.TextContainer{
-    max-width:50%;
-    width:100%;
+.TextContainer {
+  max-width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ButtonContainer {
+  max-width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Heading {
+  font-family: var(--robotoCondensed);
+  font-style: normal;
+  font-weight: var(--bold);
+  font-size: 3.125rem;
+  line-height: 3.6875rem;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.Text {
+  font-family: var(--roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--white);
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.DescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.DescriptionContainer p.Text:not(:last-child) {
+  padding-bottom: 2rem;
+}
+
+.Small.CardContainer {
+  height: 28.75rem;
+}
+.Small .Card {
+  padding: 40px 60px;
+  height: 28.75rem;
+}
+.Large.CardContainer {
+  height: 40.1875rem;
+}
+.Large .Card {
+  height: 40.1875rem;
+  padding: 3.75rem;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .ButtonContainer {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Small .Card {
+    padding: 40px 40px;
+  }
+  .TextContainer {
+    max-width: 100%;
+    height: 80%;
+  }
+  .ButtonContainer {
+    max-width: 100%;
+    align-content: flex-start;
+    justify-content: normal;
+  }
+  .Card {
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .DescriptionContainer {
+    display: block;
+    width: 75%;
+  }
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Card {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.ButtonContainer{
-    max-width: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;  
-}
-
-.Heading{
-    font-family: var(--robotoCondensed);
-    font-style: normal;
-    font-weight: var(--bold);
-    font-size: 3.125rem;
-    line-height: 3.6875rem;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: var(--white);
-}
-.Text{
-    font-family: var(--roboto);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    color:var(--white);
-    word-wrap: break-word;
-    word-break: break-word;
-}
-.DescriptionContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.DescriptionContainer p.Text:not(:last-child){
-    padding-bottom:2rem;
-}
-
-.Small.CardContainer{
-    height: 28.75rem;
-}
-.Small .Card{
-    padding: 40px 60px;
-    height: 28.75rem;
-}
-.Large.CardContainer{
-    height:40.1875rem;
-}
-.Large .Card{
-    height:40.1875rem;
-    padding:3.75rem
-}
-
-
-@media screen and (min-width:576px) and (max-width: 768px){
-    .ButtonContainer{
-        align-items: flex-start;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    .Small .Card{
-        padding: 40px 40px;
-    }
-    .TextContainer{
-        max-width:100%;
-        height:80%;
-    }
-    .ButtonContainer{
-        max-width:100%;
-        align-content: flex-start;
-        justify-content: normal;
-    }
-    .Card{
-        flex-wrap: wrap;
-    align-content: space-between
-    }
-    .DescriptionContainer{
-        display:block;
-        width: 75%;
-    }
-    .btn{
-        margin-bottom: 0;
-    }  
-}
-
-@media screen and (max-width:768px){
-    .Card{
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-        padding: 2.25rem 1rem;
-    }
-    .Small .Card{
-        padding-top:30px;
-        padding-left:20px;
-        padding-right:20px;
-        padding-bottom:20px;
-    }
-    .Large .Card{
-        padding: 36px 16px;
-    }
-    .Small .Text{
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .Large .Text{
-        font-size: 18px;
-        line-height: 24px;
-    }
-    .CardContainer{
-        background-image: url("../../images/customerMobile.jpg");
-    }
-    .Large.CardContainer{
-        margin-bottom:60px;
-    }
-    .Small.CardContainer{
-        margin-bottom: 20px
-    }
-    .Heading{
-        font-size: 2.125rem;
-        line-height: 2.5rem;
-    }
-    .btn {
-        margin-bottom: 0;
-        margin-right: 0;
-    }
-    .ButtonContainer{
-        padding:0;
-        flex-wrap: nowrap;
-        align-items: stretch;
-    }
-    .DescriptionContainer{
-        width:100% !important;
-    }
-    .DescriptionContainer p.Text:not(:last-child){
-        padding-bottom:1.25rem;
-    }
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 2.25rem 1rem;
+  }
+  .Small .Card {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .Large .Card {
+    padding: 36px 16px;
+  }
+  .Small .Text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .Large .Text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .CardContainer {
+    background-image: url("../../images/customerMobile.jpg");
+  }
+  .Large.CardContainer {
+    margin-bottom: 60px;
+  }
+  .Small.CardContainer {
+    margin-bottom: 20px;
+  }
+  .Heading {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+  }
+  .btn {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .ButtonContainer {
+    padding: 0;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  .DescriptionContainer {
+    width: 100% !important;
+  }
+  .DescriptionContainer p.Text:not(:last-child) {
+    padding-bottom: 1.25rem;
+  }
 }

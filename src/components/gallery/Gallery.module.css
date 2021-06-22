@@ -1,124 +1,119 @@
-
-.ImageContainer{
-    position:relative;
-    border-radius: 1.25rem;
-    border-radius:1.25rem;
-    background-size: cover;
-    background-repeat: no-repeat;
+.ImageContainer {
+  position: relative;
+  border-radius: 1.25rem;
+  border-radius: 1.25rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.Overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index:10;
-    color:white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.25rem;
+.Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.25rem;
 }
 
-.ExtraSpace{
-    height:40px;
+.ExtraSpace {
+  height: 40px;
 }
 
-.Service{
-    font-family: Roboto Condensed;
-font-style: normal;
-font-weight: bold;
-font-size: 38px;
-line-height: 45px;
-text-align: center;
-letter-spacing: -0.01em;
-text-transform: uppercase;
-color: #FFFFFF;
+.Service {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
-.Gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-
-.CTAButton{
-    margin-top: 60px;
-    margin-bottom: 100px;
+.Gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-
-.Text{
-    font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 28px;
-color: #000000;
-word-wrap: break-word;
-word-break: break-word;
+.CTAButton {
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
 
-.Regular.ImageContainer{
-    width: 30.304%;
-    height: 25rem;
-    margin-bottom:60px;
-}
-.Custom.ImageContainer{
-    height:460px;
-     width:100%;
-    margin-bottom:40px;
-}
-.Custom .Overlay{
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.CustomContainer{
-    height:100%;
-    width:48%;
-}
-@media screen and (max-width:1024px){
-    .Regular.ImageContainer{
-        margin-bottom: 2.5rem;
-        height: 17.75rem;
-    }
-    .Custom.ImageContainer{
-        height: 326px;
-    }
-    .CTAButton{
-        margin: 40px auto;
-    }
+.Text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
-@media screen and (max-width:768px){
-    .Regular.ImageContainer{
-        margin-bottom: 1.25rem;
-        height: 10.78125rem;
-        width: 48.6%;
-    }
-    .CustomContainer{
-        width:100%;
-        height:100%;
-    }
-    .CustomContainer:not(:last-child){
-        margin-bottom:60px;
-    }
-    .Custom.ImageContainer{
-        height:326px
-        
-    }
-    .CTAButton{
-        margin-top:30px;
-        margin-bottom:80px;
-    }
-    .Service{
-        font-size: 30px;
-line-height: 35px;
-    }
-    .ExtraSpace{
-        display:none;
-    }
+.Regular.ImageContainer {
+  width: 30.304%;
+  height: 25rem;
+  margin-bottom: 60px;
+}
+.Custom.ImageContainer {
+  height: 460px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.Custom .Overlay {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.CustomContainer {
+  height: 100%;
+  width: 48%;
+}
+@media screen and (max-width: 1024px) {
+  .Regular.ImageContainer {
+    margin-bottom: 2.5rem;
+    height: 17.75rem;
+  }
+  .Custom.ImageContainer {
+    height: 326px;
+  }
+  .CTAButton {
+    margin: 40px auto;
+  }
 }
 
+@media screen and (max-width: 768px) {
+  .Regular.ImageContainer {
+    margin-bottom: 1.25rem;
+    height: 10.78125rem;
+    width: 48.6%;
+  }
+  .CustomContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .CustomContainer:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  .Custom.ImageContainer {
+    height: 326px;
+  }
+  .CTAButton {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+  .Service {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .ExtraSpace {
+    display: none;
+  }
+}

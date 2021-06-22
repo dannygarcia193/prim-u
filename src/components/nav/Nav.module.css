@@ -1,215 +1,223 @@
-.Nav{
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 2003px;
-    width: 100%;
-    z-index:1000000;
+.Nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 2003px;
+  width: 100%;
+  z-index: 1000000;
 }
-.NavContainer{
-    position: relative;
-    display: flex;
-    height:100%;
-    align-items:flex-end;
-    justify-content: space-between;
-    border-radius: 0.625rem;
-    transition: all .2s;  
-    margin-left: 3.125rem;
-    margin-right: 3.125rem;
+.NavContainer {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 0.625rem;
+  transition: all 0.2s;
+  margin-left: 3.125rem;
+  margin-right: 3.125rem;
 }
-.LogoContainer{
-    height: 3.1875rem;
-    max-width: 15.375rem;
-    width: 15.375rem;
-    display:flex;
-    align-items:center;
+.LogoContainer {
+  height: 3.1875rem;
+  max-width: 15.375rem;
+  width: 15.375rem;
+  display: flex;
+  align-items: center;
 }
-.NavLinkContainer{
-    display:flex;
-    flex-direction: row;
-    column-gap: 2.5rem;
-    list-style: none;
-    margin-left:auto;
-    margin-bottom:0;
-    margin-top:0;
-    padding:0;
-    padding-bottom: 0.9375rem;
+.NavLinkContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2.5rem;
+  list-style: none;
+  margin-left: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+  padding-bottom: 0.9375rem;
 }
-.Logo{
-    height: inherit;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all .2s;
-    margin-right: 1.333333333rem;
-  }
-  svg:hover > path:last-child, .textDark svg:hover > path:last-child {
-    fill: #A791B8;
-  }
-  svg:hover > path:not(:first-child),.textDark svg:hover > path:not(:first-child) {
-    fill: #683D83;
-  }
-  svg:hover{
-    cursor:pointer;
-  }
-.LogoTitle{
-    font-family: var(--roboto);
-    font-style: normal;
-    font-weight: var(--black-text);
-    font-size: 1.875rem;
-    line-height: 2.1875rem;
-    letter-spacing: -0.03em;
-    color: var(--white);
-    margin: 0;
-    transition: all .2s;
+.Logo {
+  height: inherit;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s;
+  margin-right: 1.333333333rem;
 }
-.NavItem{
-    flex: 1 1 auto;
-    text-align: center;
+svg:hover > path:last-child,
+.textDark svg:hover > path:last-child {
+  fill: #a791b8;
 }
-.NavLink{
-    font-family: var(--robotoCondensed);
-    font-style: normal;
-    font-weight: var(--bold);
-    font-size: 1.25rem;
-    letter-spacing: -0.01em;
-    text-decoration:none;
-    color:var(--white);
+svg:hover > path:not(:first-child),
+.textDark svg:hover > path:not(:first-child) {
+  fill: #683d83;
 }
-.NavLink:hover, .LogoTitle:hover{
-    cursor:pointer;
-    color: var(--primary);
-    text-decoration:none;
-    transition: all .1s; 
+svg:hover {
+  cursor: pointer;
 }
-.NavToggler{
-    all: unset;
-    width: 1.875rem;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    cursor: pointer;
-    display: none;
+.LogoTitle {
+  font-family: var(--roboto);
+  font-style: normal;
+  font-weight: var(--black-text);
+  font-size: 1.875rem;
+  line-height: 2.1875rem;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  margin: 0;
+  transition: all 0.2s;
+}
+.NavItem {
+  flex: 1 1 auto;
+  text-align: center;
+}
+.NavLink {
+  font-family: var(--robotoCondensed);
+  font-style: normal;
+  font-weight: var(--bold);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--white);
+}
+.NavLink:hover,
+.LogoTitle:hover {
+  cursor: pointer;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.1s;
+}
+.NavToggler {
+  all: unset;
+  width: 1.875rem;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  cursor: pointer;
+  display: none;
 }
 .NavToggler:hover {
-    text-decoration: none;
-    cursor:pointer;
-  }
+  text-decoration: none;
+  cursor: pointer;
+}
 
-@media screen and (max-width: 768px){
-    .Nav{
-        height:3.3125rem!important;
-    }
-    .NavContainer{
-        margin-left:.75rem;
-        margin-right:1rem;
-    }
-    .NavLinkContainer{
-        display:none;      
-    }
-    .LogoContainer{
-        display:flex;
-        margin-top:0;
-        align-items: flex-end;
-    }
-    .Logo{
-        height: 2.04375rem;
-        margin-right: 0.5625rem;
-    }
-    .LogoTitle{
-        font-size: 1.25rem;
-    }
-    .NavToggler{
-        display:inline-block;
-        padding-bottom: 0.625rem;
-    }
-    .DropdownNav{
-        top:10px;
-        margin-left: 0.625rem;
-        margin-right:0.625rem;
-        background-color:white;
-        padding: 12px 10px 0; 
-    }
-    .DropdownNav .LogoContainer{
-        display:inline-flex;
-        align-items: flex-start
-    }
-    .DropdownNav .NavLinkContainer{
-        display: flex;
-        flex-direction: column; 
-        margin: auto;
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-        align-items: center;
-        row-gap: 1.25rem;
-        transition: all .3s ease-out;
-    }
-    .DropdownNav.NavContainer{
-        display:block !important;
-        height:fit-content;
-    }
-    .DropdownNav .NavToggler{
-        padding: 0;
-        float: right;
-        width: 2.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-        height: 2.04375rem;
-        justify-content: center;
-        transform: rotate(90deg);
-        transition: all .2s 
-    }
-    .DropdownNav .NavLink, .DropdownNav .LogoTitle{
-        color:var(--black)
-    }
-    .DropdownNav .NavLink:hover, .DropdownNav .LogoTitle:hover{
-        color: var(--primary)
-    }
-    .DropdownNav svg > path:last-child {
-        fill: #A6A6A6 ;
-      }
-    .DropdownNav  svg > path:not(:first-child){
-        fill: var(--black);
-      }
-
-}
-.textDark.NavContainer, .textDark .LogoContainer{
-    align-items:center;
-}
-.textDark .NavLink, .textDark .LogoTitle{
-    color:var(--black)
-}
-.textDark svg > path:last-child {
-    fill: #A6A6A6 ;
+@media screen and (max-width: 768px) {
+  .Nav {
+    height: 3.3125rem !important;
   }
-.textDark  svg > path:not(:first-child){
+  .NavContainer {
+    margin-left: 0.75rem;
+    margin-right: 1rem;
+  }
+  .NavLinkContainer {
+    display: none;
+  }
+  .LogoContainer {
+    display: flex;
+    margin-top: 0;
+    align-items: flex-end;
+  }
+  .Logo {
+    height: 2.04375rem;
+    margin-right: 0.5625rem;
+  }
+  .LogoTitle {
+    font-size: 1.25rem;
+  }
+  .NavToggler {
+    display: inline-block;
+    padding-bottom: 0.625rem;
+  }
+  .DropdownNav {
+    top: 10px;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    background-color: white;
+    padding: 12px 10px 0;
+  }
+  .DropdownNav .LogoContainer {
+    display: inline-flex;
+    align-items: flex-start;
+  }
+  .DropdownNav .NavLinkContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    align-items: center;
+    row-gap: 1.25rem;
+    transition: all 0.3s ease-out;
+  }
+  .DropdownNav.NavContainer {
+    display: block !important;
+    height: fit-content;
+  }
+  .DropdownNav .NavToggler {
+    padding: 0;
+    float: right;
+    width: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2.04375rem;
+    justify-content: center;
+    transform: rotate(90deg);
+    transition: all 0.2s;
+  }
+  .DropdownNav .NavLink,
+  .DropdownNav .LogoTitle {
+    color: var(--black);
+  }
+  .DropdownNav .NavLink:hover,
+  .DropdownNav .LogoTitle:hover {
+    color: var(--primary);
+  }
+  .DropdownNav svg > path:last-child {
+    fill: #a6a6a6;
+  }
+  .DropdownNav svg > path:not(:first-child) {
     fill: var(--black);
   }
-.textDark .NavToggler svg > rect{
-    fill: var(--black)
+}
+.textDark.NavContainer,
+.textDark .LogoContainer {
+  align-items: center;
+}
+.textDark .NavLink,
+.textDark .LogoTitle {
+  color: var(--black);
+}
+.textDark svg > path:last-child {
+  fill: #a6a6a6;
+}
+.textDark svg > path:not(:first-child) {
+  fill: var(--black);
+}
+.textDark .NavToggler svg > rect {
+  fill: var(--black);
 }
 
-.textDark.NavContainer.DropdownNav .NavLinkContainer{
-    padding-bottom: 2.5rem;
+.textDark.NavContainer.DropdownNav .NavLinkContainer {
+  padding-bottom: 2.5rem;
 }
-.textDark.NavContainer.DropdownNav .LogoContainer{
-    align-items: flex-start;
+.textDark.NavContainer.DropdownNav .LogoContainer {
+  align-items: flex-start;
 }
-.textDark.NavContainer .NavToggler, .textDark.NavContainer .NavLinkContainer{
-    padding-bottom:0;
+.textDark.NavContainer .NavToggler,
+.textDark.NavContainer .NavLinkContainer {
+  padding-bottom: 0;
 }
-.textDark .NavLink:hover, .textDark .LogoTitle:hover{
-    color: var(--primary)
+.textDark .NavLink:hover,
+.textDark .LogoTitle:hover {
+  color: var(--primary);
 }
 
-@media screen and (min-width: 1024px){
-    .NavContainer{
-        margin: 0 2.5rem;
-    }
+@media screen and (min-width: 1024px) {
+  .NavContainer {
+    margin: 0 2.5rem;
+  }
 }
-@media screen and (min-width: 1400px){
-    .NavContainer{
-        margin: 0 3.75rem;
-    }
+@media screen and (min-width: 1400px) {
+  .NavContainer {
+    margin: 0 3.75rem;
+  }
 }

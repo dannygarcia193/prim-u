@@ -1,112 +1,112 @@
-.MainContainer{
-    display:flex;
-    flex-wrap: wrap;
+.MainContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
-.QAContainer{
-    display: inline-flex;
-    margin-bottom: 60px;
-    flex-direction: column;
-    width: 50%;
+.QAContainer {
+  display: inline-flex;
+  margin-bottom: 60px;
+  flex-direction: column;
+  width: 50%;
 }
-.Question{
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 37px;  
-    letter-spacing: -0.01em;
-    color: #000000;
+.Question {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: -0.01em;
+  color: #000000;
 }
-.Answer{
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: -0.01em;
-    color: #000000;
-    margin-top:30px;
+.Answer {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  margin-top: 30px;
 }
-.QAContainer:nth-child(odd){
-    padding-right:30px;
+.QAContainer:nth-child(odd) {
+  padding-right: 30px;
 }
-.QAContainer:nth-child(even){
-    padding-left:30px;
+.QAContainer:nth-child(even) {
+  padding-left: 30px;
 }
-button.ShowMore{
-    padding: 11px 118px;
-    background: #FFFFFF;
-    border: 1px solid #683D83;
-    box-sizing: border-box;
-    border-radius: 10px;
-    margin:auto;
-    margin-bottom:100px;
-    margin-top:40px;
-    display: flex;
-    justify-content: center;
+button.ShowMore {
+  padding: 11px 118px;
+  background: #ffffff;
+  border: 1px solid #683d83;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
-button.ShowMore:hover{
-    background-color:var(--primary);
+button.ShowMore:hover {
+  background-color: var(--primary);
 }
-button:hover .BtnText{
-    color:white;
-}
-
-.BtnText{
-    font-family: var(--robotoCondensed);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 37px;
-    text-align: center;
-    letter-spacing: -0.01em;
-    color:var(--primary);
-    text-transform: uppercase;
-}
-.Heading{
-    display:flex;
-    flex-direction: column;
-}
-.SectionName{
-    font-family: Roboto Condensed;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 37px;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #000000;
-}
-.Underline{
- width: 221px;
-height: 2px;
-background:#000000;
-margin-bottom:60px;
-margin-top:6px;
+button:hover .BtnText {
+  color: white;
 }
 
-  @media screen and (max-width:640px){
-      .QAContainer{
-          width:100%;
-          margin-bottom:40px;
-      }
-      .QAContainer:nth-child(even){
-          padding:0;
-      }
-      .QAContainer:nth-child(odd){
-          padding:0;
-      }
-     button.ShowMore{
-        margin-top:20px;
-        margin-bottom:80px;
-        width:100%;
-        padding:11px;
-     }
-     .Question{
-        font-size:24px;
-        line-height:28px;
-     }
-     .Answer{
-        margin-top:20px;
-     }
+.BtnText {
+  font-family: var(--robotoCondensed);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.Heading {
+  display: flex;
+  flex-direction: column;
+}
+.SectionName {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.Underline {
+  width: 221px;
+  height: 2px;
+  background: #000000;
+  margin-bottom: 60px;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 640px) {
+  .QAContainer {
+    width: 100%;
+    margin-bottom: 40px;
   }
+  .QAContainer:nth-child(even) {
+    padding: 0;
+  }
+  .QAContainer:nth-child(odd) {
+    padding: 0;
+  }
+  button.ShowMore {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    width: 100%;
+    padding: 11px;
+  }
+  .Question {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .Answer {
+    margin-top: 20px;
+  }
+}

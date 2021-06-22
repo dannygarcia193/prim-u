@@ -1,92 +1,92 @@
-.ProductContainer{
-    width: 400px;
-height: 100%;
-border-radius: 20px;
-margin-right:40px;
-background: #F2F2F2;
+.ProductContainer {
+  width: 400px;
+  height: 100%;
+  border-radius: 20px;
+  margin-right: 40px;
+  background: #f2f2f2;
 }
-.MainContainer{
-    display:inline-flex;
-    margin-bottom:80px;
+.MainContainer {
+  display: inline-flex;
+  margin-bottom: 80px;
 }
-.CTAButton{
-    display:flex;
-    margin:auto;
-    background-color:var(--primary)
+.CTAButton {
+  display: flex;
+  margin: auto;
+  background-color: var(--primary);
 }
-.ButtonText{
-    color: white
+.ButtonText {
+  color: white;
 }
-.ImageContainer{
-    width: 100%;
-    height: 220px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+.ImageContainer {
+  width: 100%;
+  height: 220px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
-.Name{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 28px;
-    color: #000000;
-    margin-bottom:20px;
+.Name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 20px;
 }
-.Text{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    color: #5C5C5C;
-    margin-bottom:35px;
-    word-wrap: break-word;
-    word-break: break-word;
+.Text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5c5c5c;
+  margin-bottom: 35px;
+  word-wrap: break-word;
+  word-break: break-word;
 }
-.Price{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    color: #FFFFFF;
+.Price {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
 }
-.PriceContainer{
-    background: #683D83;
-    border-radius: 5px;
-    padding: 6px 11px;
-    width: fit-content;
+.PriceContainer {
+  background: #683d83;
+  border-radius: 5px;
+  padding: 6px 11px;
+  width: fit-content;
 }
-.ProductInfo{
-    display: flex;
-    flex-direction: column;
-    padding: 30px 24px;
-}
-
-@media screen and (max-width:1024px){
-    .ProductContainer{
-        width: 284px;
-        height: 508px;
-        margin-right:20px;
-    }
-    .ProductInfo{
-        padding: 25px 16px;
-    }
-    .Text{
-        margin-bottom: 20px;
-    }
-    .Name{
-        margin-bottom:15px;
-    }
+.ProductInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px;
 }
 
-@media screen and (max-width:768px){
-    .MainContainer{
-        margin-bottom:60px;
-    }
+@media screen and (max-width: 1024px) {
+  .ProductContainer {
+    width: 284px;
+    height: 508px;
+    margin-right: 20px;
+  }
+  .ProductInfo {
+    padding: 25px 16px;
+  }
+  .Text {
+    margin-bottom: 20px;
+  }
+  .Name {
+    margin-bottom: 15px;
+  }
 }
-@media screen and (max-width: 640px){
-    .CTAButton{
-        display:none;
-    }
+
+@media screen and (max-width: 768px) {
+  .MainContainer {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .CTAButton {
+    display: none;
+  }
 }

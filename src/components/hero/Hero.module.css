@@ -1,69 +1,69 @@
 .Hero {
-    padding: 0 3.75rem;
-    width: 100%;
-    height: 100vh;
-    background-image: url("../../images/hero.svg");
-    background-repeat: no-repeat;
-    background-color: black;
-    background-position-x: 7.5rem;
-    background-position-y: -13.4375rem;
-    margin-bottom: 60px;
+  padding: 0 3.75rem;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../images/hero.svg");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position-x: 7.5rem;
+  background-position-y: -13.4375rem;
+  margin-bottom: 60px;
 }
-.HeroContainer{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 2000px;
-    height: 100%;
-    margin: auto;
+.HeroContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 2000px;
+  height: 100%;
+  margin: auto;
 }
-.Title{
-    width: 28.75rem;
-    color: var(--white);
-    font-family: var(--robotoCondensed);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 3.125rem;
-    line-height: 3.6875rem;
-    letter-spacing: -0.01em;
+.Title {
+  width: 28.75rem;
+  color: var(--white);
+  font-family: var(--robotoCondensed);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.125rem;
+  line-height: 3.6875rem;
+  letter-spacing: -0.01em;
 }
 
-@media screen and (min-width:768px){
-    .Hero{
-        height: 43.75rem;
-    }
+@media screen and (min-width: 768px) {
+  .Hero {
+    height: 43.75rem;
+  }
 }
 @media screen and (max-width: 1024px) {
-    .Hero{
-        background-position-x: -3.75rem;
-        background-position-y: -13.4375rem;
-        padding: 0 2.5rem;
-    }
+  .Hero {
+    background-position-x: -3.75rem;
+    background-position-y: -13.4375rem;
+    padding: 0 2.5rem;
   }
+}
 @media screen and (max-width: 768px) {
-    .Hero{
-        background-size: cover;
-        background-position-x: center;
-        background-position-y: 6.3125rem;
-        padding: 0 0.4375rem;
-    }
-    .HeroContainer{
-        align-items: flex-start;
-    }
-    .Title{
-        font-size: 2.125rem;
-        line-height: 2.5rem;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 12.5rem;
-        }
+  .Hero {
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 6.3125rem;
+    padding: 0 0.4375rem;
   }
+  .HeroContainer {
+    align-items: flex-start;
+  }
+  .Title {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 12.5rem;
+  }
+}
 
 @media screen and (max-width: 640px) {
-    .Title{
-        width: 20.9375rem;
-    }
-    .Hero{
-        margin-bottom: 20px;
-    }
+  .Title {
+    width: 20.9375rem;
+  }
+  .Hero {
+    margin-bottom: 20px;
+  }
 }
