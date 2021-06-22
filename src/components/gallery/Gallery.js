@@ -1,14 +1,34 @@
 import * as styles from "./Gallery.module.css"
 import React from "react"
 import Header from "../header/Header"
+import { useStaticQuery, graphql } from "gatsby"
+
 const ServicesText = ["massage", "WAXING", "make up", "manicure", "hair", "male grooming"]
 const ServicesImage = ["image2.svg","image3.svg", "Rectangle8.svg", "image4.svg","image5.svg","image6.svg"]
 const Gallery = () =>{
-    const image = ServicesImage.map( (imageURL, idx)=> {
+    const data = useStaticQuery(graphql`
+    {
+      allContentfulServicesSection {
+        edges {
+          node {
+            id
+            image {
+              fluid {
+                srcWebp
+              }
+              title
+            }
+          }
+        }
+      }
+    }
+  `).allContentfulServicesSection.edges
+
+    const image = data.map( ({node})=> {
         return (
-            <div key={idx} className={styles.ImageContainer + ' '+ styles.Regular}>
+            <div key={node.id} className={styles.ImageContainer + ' '+ styles.Regular}  style ={{backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`}}>
                 <div className={styles.Overlay}>
-                    <p className={styles.Service}>{ServicesText[idx]}</p>
+                    <p className={styles.Service}>{node.image.title}</p>
                 </div>
             </div>
         )

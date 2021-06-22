@@ -14,7 +14,8 @@
 .ImageSection{
     width: 22.75%;
     height: 570px;
-    background-color:white;
+    background-size:cover;
+    background-repeat: no-repeat;
     margin-left: 16%;
     border-radius: 50px;
     margin-top: auto;

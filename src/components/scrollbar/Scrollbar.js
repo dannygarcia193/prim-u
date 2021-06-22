@@ -24,8 +24,8 @@ const Scrollbar = ({currentRef, idx }) => {
      
     return (
     <div className={styles.ScrollContainer} id={idx}>
-        <button  className={styles.ScrollControl + " " + styles.Left}  onClick={e => scroll(-.2)} />
-        <button  className={styles.ScrollControl  + " " + styles.Right} onClick={e => scroll(.2)}/>
+        <button  aria-label="Scroll left" className={styles.ScrollControl + " " + styles.Left}  onClick={e => scroll(-.2)} />
+        <button  aria-label="Scroll right" className={styles.ScrollControl  + " " + styles.Right} onClick={e => scroll(.2)}/>
     </div>
     )
 }

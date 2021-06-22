@@ -1,15 +1,40 @@
 import React from "react"
 import * as styles from "./Products.module.css"
 import Carousel from "../carousel/Carousel"
+import { useStaticQuery, graphql } from "gatsby"
+
 const Products = () => {
-    const products = [1,2,3,4,5,6,7,8,9].map( (count, idx) => {
+    const data = useStaticQuery(graphql`
+    {
+      allContentfulProducts {
+        edges {
+          node {
+            image {
+              fluid {
+                srcWebp
+              }
+              title
+            }
+            description {
+              description
+            }
+            price
+            priceLink
+          }
+        }
+      }
+    }
+  `).allContentfulProducts.edges
+    const products = data.map( ({node}) => {
         return( 
-        <div key={idx} className={styles.ProductContainer}>
-            <div className={styles.ImageContainer}/>
+        <div key={node.id} className={styles.ProductContainer}>
+            <div className={styles.ImageContainer} style ={{backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`}}/>
             <div className={styles.ProductInfo}>
-                <div className={styles.Name}>Scrub - Self heat Manda</div>
-                 <p className={styles.Text}>Scrub for your body, description of the item, something else, some selling text, unique qualities and outstanding properties.</p>
-                 <div className={styles.PriceContainer}><span className={styles.Price}>₽ 277</span></div>
+                <div className={styles.Name}>{node.image.title}</div>
+                {node.description.description.split('\n\n').map(paragraph => <p className={styles.Text}>{paragraph}</p> )}
+                <a href={node.priceLink} target="_blank" rel="noopener noreferrer">
+                    <div className={styles.PriceContainer}><span className={styles.Price}>{node.price}</span></div>
+                </a>
             </div>
         </div>
         )
@@ -23,8 +48,8 @@ const Products = () => {
     return (
     <>
     <Carousel currentRef={currentRef} idx={"Products"}><Products/></Carousel>
-    <button className={styles.CTAButton + ' ' + 'CTAButton'}>
-        <span className={styles.ButtonText+ ' ' + 'ButtonText'}>check out beauty products</span>
+    <button className={styles.CTAButton + ' CTAButton'}>
+        <span className={styles.ButtonText+ ' ButtonText'}>check out beauty products</span>
     </button>
     </>
     )

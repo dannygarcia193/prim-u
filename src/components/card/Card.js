@@ -1,27 +1,26 @@
 import React from "react"
 import * as styles from "./Card.module.css"
 
-const Card = ({small}) => {
+const Card = ({small, data}) => {
     const size = small===true ? styles.Small : styles.Large
-    return(
-    <div className={styles.CardContainer + ' ' +size}>
-        <div className={styles.Card}>
-            <div className={styles.TextContainer}>
-                <p className={styles.Heading}>FOR CUSTOMERS</p>
-                <div className={styles.DescriptionContainer}>
-                    <p className={styles.Text}>Enjoy beauty treatments wherever U are</p>
-                    <p className={styles.Text}>Struggling to find the time to pamper yourself? 
-                    With just one click, Prim-U will connect U to the right primlancer, at the right time, right in the comfort of your home. 
-                    On holiday? Book an expert primlancer closest to U. 
-                    Simply click, pick a treatment and we’ll come to U.</p>
+    const cards =  data.map( ({node}) => {
+      return(
+        <div key={node.id} className={styles.CardContainer + ' ' +size} style ={{backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`}}>
+            <div className={styles.Card}>
+                <div className={styles.TextContainer}>
+                    <p className={styles.Heading}>{node.image.title}</p>
+                    <div className={styles.DescriptionContainer}>
+                        {node.description.description.split('\n\n').map(paragraph => <p className={styles.Text}>{paragraph}</p> )}
+                    </div>
+                </div>
+                <div className={styles.ButtonContainer}>
+                    <a href={node.callToActionLink} target="_blank" rel="noopener noreferrer"><button className={"CTAButton " +styles.btn}><span className="ButtonText">{node.callToAction}</span></button></a>
                 </div>
             </div>
-            <div className={styles.ButtonContainer}>
-                <button className={"CTAButton " +styles.btn}><span className="ButtonText">Make a Booking</span></button>
-            </div>
         </div>
-    </div>
-    )
+        )
+      })
+    return <div>{cards}</div>
 } 
 
 export default Card

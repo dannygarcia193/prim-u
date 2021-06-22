@@ -1,30 +1,50 @@
 import * as styles from "./Gallery.module.css"
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 const Services  = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allContentfulBeautyServicesSection {
+        edges {
+          node {
+            id
+            callToAction
+            callToActionLink
+            image {
+              fluid {
+                srcWebp
+              }
+              title
+            }
+            description {
+              description
+            }
+          }
+        }
+      }
+    }
+  `).allContentfulBeautyServicesSection.edges
+  const services = data.map( ({node}) => {
+    return (
+      <div key={node.id} className={styles.CustomContainer}>
+        <div className={styles.ImageContainer + " "+ styles.Custom} style ={{backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`}}>
+            <div className={styles.Overlay}>
+            <p className={styles.Service}>{node.image.title}</p>
+            <a href={node.callToActionLink} target="_blank" rel="noopener noreferrer">
+              <button className={"CTAButton " + styles.CTAButton}><span className="ButtonText">{node.callToAction}</span></button>
+            </a>
+            </div>
+        </div>
+        {node.description.description.split('\n\n').map(paragraph => <p className={styles.Text}>{paragraph}</p> )}
+    </div>
+    )
+  })
     return (
     <>
     <div className={styles.Gallery} id="WORK-WITH-US">
-        <div className={styles.CustomContainer}>
-            <div className={styles.ImageContainer + " "+ styles.Custom}>
-                <div className={styles.Overlay}>
-                <p className={styles.Service}>For Freelancers</p>
-                <button className={"CTAButton " + styles.CTAButton}><span className="ButtonText">Make a Booking</span></button>
-                </div>
-            </div>
-            <p className={styles.Text}>Connecting U to our network of customers
-    Small business? We want to offer U a big opportunity. Download the Prim-U app and we’ll instantly give U access to thousands of customers, salons, spas and guesthouses closest to U. So simple. So mobile. So rewarding.</p>
-        </div>
-        <div className={styles.CustomContainer}>
-            <div className={styles.ImageContainer + " "+ styles.Custom}>
-                <div className={styles.Overlay}>
-                <p className={styles.Service}>For Salons / Spas</p>
-                <button className={"CTAButton " + styles.CTAButton}><span className="ButtonText">Sign Up</span></button>
-                </div>
-            </div>
-            <p className={styles.Text}>The beauty platform that benefits U.
-    Prim-U makes offering customers exceptional luxury at everyday prices easy. We’ll make use of your under-utilised space and match U with any beauty therapist U need – from massage therapists to beauticians and hair stylists. It’s big businesses helping small businesses gain even bigger opportunities. It’s a win-win.</p>
-        </div>
-    </div>
+        {services}
+      </div>
     </>
     ) 
 }
