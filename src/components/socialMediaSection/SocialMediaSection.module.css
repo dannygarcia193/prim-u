@@ -3,12 +3,14 @@
   justify-content: space-between;
   margin-bottom: 100px;
 }
+.Image,
+.Image::before,
+.Image::after {
+  border-radius: 20px;
+}
 .Image {
   width: 48%;
   height: 48vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 20px;
   margin-top: auto;
   margin-bottom: auto;
 }

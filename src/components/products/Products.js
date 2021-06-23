@@ -2,6 +2,7 @@ import React from "react";
 import * as styles from "./Products.module.css";
 import Carousel from "../carousel/Carousel";
 import { useStaticQuery, graphql } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
 const Products = () => {
   const data = useStaticQuery(graphql`
@@ -12,7 +13,10 @@ const Products = () => {
             id
             image {
               fluid {
+                base64
+                tracedSVG
                 srcWebp
+                srcSetWebp
               }
               title
             }
@@ -29,11 +33,13 @@ const Products = () => {
   const products = data.map(({ node }) => {
     return (
       <div key={node.id} className={styles.ProductContainer}>
-        <div
+        <BackgroundImage
+          Tag="div"
+          key={node.id}
           className={styles.ImageContainer}
-          style={{
-            backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`,
-          }}
+          fluid={node.image.fluid}
+          role="img"
+          aria-label={"Image of " + node.image.title + " service"}
         />
         <div className={styles.ProductInfo}>
           <div className={styles.Name}>{node.image.title}</div>

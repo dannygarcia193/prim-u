@@ -1,9 +1,8 @@
-.ImageContainer {
-  position: relative;
+.ImageContainer,
+.ImageContainer::before,
+.ImageContainer::after,
+.Overlay {
   border-radius: 1.25rem;
-  border-radius: 1.25rem;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .Overlay {
@@ -18,7 +17,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1.25rem;
 }
 
 .ExtraSpace {

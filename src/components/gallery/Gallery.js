@@ -2,6 +2,7 @@ import * as styles from "./Gallery.module.css";
 import React from "react";
 import Header from "../header/Header";
 import { useStaticQuery, graphql } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`
@@ -12,7 +13,10 @@ const Gallery = () => {
             id
             image {
               fluid {
+                base64
+                tracedSVG
                 srcWebp
+                srcSetWebp
               }
               title
             }
@@ -24,17 +28,19 @@ const Gallery = () => {
 
   const image = data.map(({ node }) => {
     return (
-      <div
+      <BackgroundImage
+        Tag="div"
         key={node.id}
         className={styles.ImageContainer + " " + styles.Regular}
-        style={{
-          backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`,
-        }}
+        fluid={node.image.fluid}
+        role="img"
+        aria-label={"Image of " + node.image.title + " service"}
+        preserveStackingContext={true}
       >
         <div className={styles.Overlay}>
           <p className={styles.Service}>{node.image.title}</p>
         </div>
-      </div>
+      </BackgroundImage>
     );
   });
   return (

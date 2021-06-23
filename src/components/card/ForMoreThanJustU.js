@@ -13,7 +13,10 @@ const ForMoreThanJustU = () => {
             id
             image {
               fluid {
+                base64
+                tracedSVG
                 srcWebp
+                srcSetWebp
               }
               title
             }

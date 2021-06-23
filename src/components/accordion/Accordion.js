@@ -1,8 +1,8 @@
 import React from "react";
 import * as styles from "./Accordion.module.css";
 
-const Accordion = ({ data }) => {
-  const faq = data.map((data) => {
+const Accordion = ({ data, itemsToShow }) => {
+  const faq = data.slice(0, itemsToShow).map((data) => {
     return (
       <details key={data.id} className={styles.QAContainer}>
         <summary className={styles.Question}>{data.question}</summary>

@@ -1,29 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700;900&display=swap");
 
-  :root{
-    --white: #FFFFFF;
-    --black: #000000;
-    --primary: #683D83;
-    --gray: #F2F2F2;
-    --bg-image:rgba(0, 0, 0, 0.5);
-    --sm:640px;
-    --md:768px;
-    --lg:1024px;
-    --xl:1280px;
-    --xxl:1440px;
-    --roboto: Roboto, sans-serif;
-    --robotoCondensed: 'Roboto Condensed', sans-serif;
-    --regular:400;
-    --bold:700;
-    --black-text:900;
-    
-  }
-  html {
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --primary: #683d83;
+  --gray: #f2f2f2;
+  --bg-image: rgba(0, 0, 0, 0.5);
+  --sm: 640px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1280px;
+  --xxl: 1440px;
+  --roboto: Roboto, sans-serif;
+  --robotoCondensed: "Roboto Condensed", sans-serif;
+  --regular: 400;
+  --bold: 700;
+  --black-text: 900;
+}
+html {
   max-width: 2000px;
-  margin:auto;
+  margin: auto;
   box-sizing: border-box;
-  font-size:16px;
-  line-height: 1;  
+  font-size: 16px;
+  line-height: 1;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
@@ -32,188 +31,222 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  }
-  *{
+}
+* {
   box-sizing: border-box;
   margin: 0;
-  padding:0;
-  }
-*, *:before, *:after {
-    box-sizing: inherit;
-  }
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
-    font-family: var(--roboto), var(--robotoCondensed);
-    font-size: 1rem;
-    color: var(--black);
-    background: var(--white);
-    overflow-y: auto;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-  }
- 
-  hr {
-    box-sizing: content-box; 
-    height: 0; 
-    overflow: visible; 
-    margin-top:100px;
-    margin-bottom:100px;
-  }
+  font-family: var(--roboto), var(--robotoCondensed);
+  font-size: 1rem;
+  color: var(--black);
+  background: var(--white);
+  overflow-y: auto;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 
- 
-  b,
-  strong {
-    font-weight: bolder;
-  }
- 
-  small {
-    font-size: 80%;
-  }
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+a {
+  text-decoration: none;
+}
+b,
+strong {
+  font-weight: bolder;
+}
 
-  img {
-    border-style: none;
-  }
+small {
+  font-size: 80%;
+}
 
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit; 
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0; 
-  }
+img {
+  border-style: none;
+}
 
-  button,
-  input { 
-    overflow: visible;
-  }
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
 
-  button,
-  select { 
-    text-transform: none;
-  }
-  button:hover{
-    cursor: pointer;
-  }
- 
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button;
-  }
+button,
+input {
+  overflow: visible;
+}
 
-  button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
+button,
+select {
+  text-transform: none;
+}
+button:hover {
+  cursor: pointer;
+}
 
-  button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
 
-  summary:hover{
-    cursor: pointer;
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+summary:hover {
+  cursor: pointer;
 }
 details > summary {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+details > summary::marker {
+  display: none;
+}
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-left: -10px;
   }
-  details > summary::marker {
-    display: none;
+  100% {
+    opacity: 1;
+    margin-left: 0px;
   }
-  details[open] summary ~ * {
-    animation: sweep .5s ease-in-out;
-  }
-  @keyframes sweep {
-    0%    {opacity: 0; margin-left: -10px}
-    100%  {opacity: 1; margin-left: 0px}
-  }
-  details>summary::after {
-    content: ' +';
-  }
-  details[open]>summary::after {
-    content: ' -';
-  }
+}
+details > summary::after {
+  content: " +";
+}
+details[open] > summary::after {
+  content: " -";
+}
 
-
-.CTAButton{
+.CTAButton {
   border-radius: 0.625rem;
   padding: 1rem 1.875rem;
   border-color: transparent;
-  background-color:#efefef;
+  background-color: #efefef;
 }
-.CTAButton:hover{
-  background-color:var(--primary);
-  cursor:pointer;
-  transition: all .2s ease-in;
-  color:white;
+.CTAButton:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  color: white;
 }
-.ButtonText{
+.ButtonText {
   font-family: var(--robotoCondensed);
   font-style: normal;
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 1.75rem;
-  color:var(--primary);
+  color: var(--primary);
   text-transform: uppercase;
+  text-decoration: none;
 }
-button:hover .ButtonText{
-  color:white;
+button:hover .ButtonText {
+  color: white;
 }
-
 
 .ScrollbarContainer::-webkit-scrollbar {
   border-radius: 5px;
-  height:4px;
+  height: 4px;
 }
-.ScrollbarContainer::-webkit-scrollbar-track{
-  background: #C4C4C4;
+.ScrollbarContainer::-webkit-scrollbar-track {
+  background: #c4c4c4;
   border-radius: 5px;
 }
 .ScrollbarContainer::-webkit-scrollbar-thumb {
   background: #000000;
   border-radius: 5px;
 }
-.ScrollbarContainer::-webkit-scrollbar-button:end:increment,.ScrollbarContainer::-webkit-scrollbar-button:start:decrement {
-  width:17.5%;
+.ScrollbarContainer::-webkit-scrollbar-button:end:increment,
+.ScrollbarContainer::-webkit-scrollbar-button:start:decrement {
+  width: 17.5%;
   display: block;
 }
-.MarginContainer{
+.MarginContainer {
   margin: 0 3.75rem;
 }
-@media screen and (max-width:1024px){
-  hr{
-      margin-top:60.5px;
-margin-bottom:40px
+@media screen and (max-width: 1024px) {
+  hr {
+    margin-top: 60.5px;
+    margin-bottom: 40px;
   }
-  .MarginContainer{
+  .MarginContainer {
     margin: 0 40px;
   }
 }
-@media screen and (max-width:768px){
-  .MarginContainer{
+@media screen and (max-width: 768px) {
+  .MarginContainer {
     margin: 0 20px;
   }
 }
 
-@media screen and (max-width:640px){
-  .ScrollbarContainer::-webkit-scrollbar-button:end:increment,.ScrollbarContainer::-webkit-scrollbar-button:start:decrement {
-    width:10%;
+@media screen and (max-width: 640px) {
+  .ScrollbarContainer::-webkit-scrollbar-button:end:increment,
+  .ScrollbarContainer::-webkit-scrollbar-button:start:decrement {
+    width: 10%;
   }
-  .MarginContainer{
+  .MarginContainer {
     margin: 0 10px;
   }
+}
+
+.back-to-top .top {
+  position: fixed;
+  cursor: pointer;
+  font-family: var(--roboto);
+  bottom: 15px;
+  right: 15px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #000000;
+  z-index: 4;
+  width: 45px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.back-to-top .top:hover {
+  color: #ffffff;
+  background: var(--primary);
 }

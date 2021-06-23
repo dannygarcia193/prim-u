@@ -1,6 +1,7 @@
 import * as styles from "./Gallery.module.css";
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
 const Services = () => {
   const data = useStaticQuery(graphql`
@@ -13,7 +14,10 @@ const Services = () => {
             callToActionLink
             image {
               fluid {
+                base64
+                tracedSVG
                 srcWebp
+                srcSetWebp
               }
               title
             }
@@ -28,11 +32,14 @@ const Services = () => {
   const services = data.map(({ node }) => {
     return (
       <div key={node.id} className={styles.CustomContainer}>
-        <div
+        <BackgroundImage
+          Tag="div"
+          key={node.id}
           className={styles.ImageContainer + " " + styles.Custom}
-          style={{
-            backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`,
-          }}
+          fluid={node.image.fluid}
+          role="img"
+          aria-label={"Image of " + node.image.title + " service"}
+          preserveStackingContext={true}
         >
           <div className={styles.Overlay}>
             <p className={styles.Service}>{node.image.title}</p>
@@ -47,7 +54,7 @@ const Services = () => {
               </button>
             </a>
           </div>
-        </div>
+        </BackgroundImage>
         {node.description.description.split("\n\n").map((paragraph, idx) => (
           <p key={idx} className={styles.Text}>
             {paragraph}

@@ -10,15 +10,19 @@
   padding-top: 85px;
   margin-bottom: 100px;
 }
+
 .ImageSection {
   width: 22.75%;
   height: 570px;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin-left: 16%;
-  border-radius: 50px;
   margin-top: auto;
   margin-bottom: auto;
+  border-radius: 50px;
+  background-size: contain;
+}
+.ImageSection::before,
+.ImageSection::after {
+  background-size: contain;
 }
 
 .Title {
@@ -79,10 +83,11 @@
 
 @media screen and (max-width: 768px) {
   .ImageSection {
-    width: 100%;
     padding: 0;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 60px;
+    width: 100%;
   }
   .TextContainer {
     width: 100%;

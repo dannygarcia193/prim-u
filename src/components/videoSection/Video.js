@@ -2,13 +2,8 @@ import React from "react";
 import * as styles from "./Video.module.css";
 import Header from "../header/Header";
 import { useStaticQuery, graphql } from "gatsby";
-/**
- *           <a href= target="_blank" rel="noopener noreferrer">
-            <div clas{data.videoUrl}sName={styles.VideoControl} />
-          </a>
+import { StaticImage } from "gatsby-plugin-image";
 
-          className={styles.VideoControl}
- */
 const VideoContainer = () => {
   const data = useStaticQuery(graphql`
     {
@@ -23,26 +18,54 @@ const VideoContainer = () => {
       }
     }
   `).allContentfulVideo.edges[0].node;
+
+  React.useEffect(() => {
+    getVideo();
+  }, []);
+
+  const getVideo = () => {
+    var v = document.getElementById("replace");
+    v.addEventListener("click", function () {
+      let parent = this.parentNode;
+      createIframe(parent);
+    });
+  };
+
+  function createIframe(parent) {
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("src", data.videoUrl);
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute(
+      "accelerometer",
+      "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    );
+    parent.firstChild.replaceWith(iframe);
+  }
+
   return (
     <>
       <Header text={""} bold={"Primlancers"} text2={"at work"} />
-      <iframe
-        className={styles.VideoFrame}
-        title="Prim U Make Up"
-        src={data.videoUrl}
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen=""
-        id="fitvid319110"
-      >
-        <p className={styles.Text}>{data.title}</p>
-      </iframe>
+      <div className="youtube-container">
+        <div className={styles.Wrapper}>
+          <div id="replace" className={styles.InitialContainer}>
+            <StaticImage src="../../images/makeup.jpg" alt="Youtube Preview" />
+            <div className={styles.VideoControl} />
+            <p className={styles.Text}>{data.title}</p>
+          </div>
+        </div>
+      </div>
 
-      <button className={styles.CTAButton + " CTAButton"}>
-        <span className={styles.ButtonText + " ButtonText"}>
-          book a make up
-        </span>
-      </button>
+      <a
+        href="https://www.prim-u.app/en/list"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className={styles.CTAButton + " CTAButton"}>
+          <span className={styles.ButtonText + " ButtonText"}>
+            book a make up
+          </span>
+        </button>
+      </a>
     </>
   );
 };

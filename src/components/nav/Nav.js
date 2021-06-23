@@ -56,9 +56,7 @@ const NavToggler = ({ collapsedNavbar, setCollapsedNavbar }) => {
     </button>
   );
 };
-const Navbar = () => {
-  const [collapsedNavbar, setCollapsedNavbar] = React.useState(false);
-  const [lightNav, setLightNav] = React.useState(false);
+const Navbar = ({ collapsedNavbar, lightNav, setCollapsedNavbar }) => {
   const showDropdownNav = collapsedNavbar === true ? styles.DropdownNav : "";
   const dynamicStyles = {
     backgroundColor: lightNav ? "white" : "transparent",
@@ -67,22 +65,6 @@ const Navbar = () => {
   };
   const turnTextDark =
     lightNav === true || collapsedNavbar === true ? styles.textDark : "";
-
-  function handleScroll() {
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    const scrolled = winScroll / height;
-    if (scrolled > 0.01) setLightNav(true);
-    else setLightNav(false);
-  }
-
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
 
   return (
     <nav role="navigation" className={styles.Nav} style={dynamicStyles}>

@@ -4,10 +4,12 @@
   display: flex;
 }
 .CardContainer {
-  border-radius: 1.25rem;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin-bottom: 60px;
+}
+.CardContainer,
+.CardContainer::before,
+.CardContainer::after {
+  border-radius: 1.25rem;
 }
 
 .TextContainer {
@@ -128,9 +130,6 @@
   .Large .Text {
     font-size: 18px;
     line-height: 24px;
-  }
-  .CardContainer {
-    background-image: url("../../images/customerMobile.jpg");
   }
   .Large.CardContainer {
     margin-bottom: 60px;

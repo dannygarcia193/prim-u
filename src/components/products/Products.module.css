@@ -17,7 +17,9 @@
 .ButtonText {
   color: white;
 }
-.ImageContainer {
+.ImageContainer,
+.ImageContainer::before,
+.ImageContainer::after {
   width: 100%;
   height: 220px;
   border-top-left-radius: 20px;

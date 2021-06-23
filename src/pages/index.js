@@ -17,6 +17,44 @@ import ForMoreThanJustU from "../components/card/ForMoreThanJustU";
 import { useStaticQuery, graphql } from "gatsby";
 
 const IndexPage = () => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const [collapsedNavbar, setCollapsedNavbar] = React.useState(false);
+  const [lightNav, setLightNav] = React.useState(false);
+
+  function handleScroll() {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = winScroll / height;
+    if (scrolled > 0.01) setLightNav(true);
+    else setLightNav(false);
+  }
+
+  function toggleVisibility() {
+    window.pageYOffset > 300 ? setIsVisible(true) : setIsVisible(false);
+  }
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", () => {
+      handleScroll();
+      toggleVisibility();
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {
+        handleScroll();
+        toggleVisibility();
+      });
+    };
+  });
+
   const data = useStaticQuery(graphql`
     {
       contentfulMainSection {
@@ -27,10 +65,21 @@ const IndexPage = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        collapsedNavbar={collapsedNavbar}
+        lightNav={lightNav}
+        setCollapsedNavbar={setCollapsedNavbar}
+      />
       <main>
         <title>{data.siteTitle}</title>
         <Hero />
+        <div className="back-to-top show-back-to-top">
+          {isVisible && (
+            <div className="top" onClick={() => scrollToTop()}>
+              Top
+            </div>
+          )}
+        </div>
         <div className="MarginContainer">
           <ForCustomers />
           <Gallery />

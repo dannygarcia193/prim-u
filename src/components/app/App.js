@@ -2,7 +2,7 @@ import * as styles from "./App.module.css";
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
-
+import BackgroundImage from "gatsby-background-image";
 const AppSection = () => {
   const data = useStaticQuery(graphql`
     {
@@ -17,7 +17,10 @@ const AppSection = () => {
             id
             image {
               fluid {
+                base64
+                tracedSVG
                 srcWebp
+                srcSetWebp
               }
             }
           }
@@ -49,11 +52,13 @@ const AppSection = () => {
           />
         </a>
       </div>
-      <div
+      <BackgroundImage
+        Tag="div"
+        key={data.id}
         className={styles.ImageSection}
-        style={{
-          backgroundImage: `url(${"https:" + data.image.fluid.srcWebp})`,
-        }}
+        fluid={data.image.fluid}
+        role="img"
+        background-size="contain"
       />
     </div>
   );

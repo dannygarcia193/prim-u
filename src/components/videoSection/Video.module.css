@@ -1,27 +1,53 @@
-iframe {
-  background-repeat: no-repeat;
-  background-size: cover;
+.Wrapper {
   width: 80%;
-  height: 450px;
   margin: auto;
-  margin-bottom: 60px;
-  border-radius: 20px;
   display: flex;
-  justify-content: flex-end;
+  align-content: center;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+  margin-bottom: 60px;
 }
-.VideoFrame {
+.InitialContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+}
+
+.InitialContainer:hover {
+  cursor: pointer;
+}
+.Wrapper img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.Wrapper iframe {
+  margin: auto;
   border-radius: 20px;
 }
-.VideoControl {
+iframe {
+  max-height: 450px;
+  margin: auto;
+  border-radius: 20px;
+  max-width: 860px;
+  width: 100%;
+  height: 50vw;
+  z-index: 1000;
+}
+iframe:hover {
+  cursor: pointer;
+}
+
+.Wrapper .VideoControl {
+  position: absolute;
   background-image: url("../../images/Group20.svg");
   width: 74px;
   height: 74px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 35px;
 }
 .CTAButton {
   margin-top: 60px;
@@ -33,44 +59,53 @@ iframe {
   color: white;
 }
 .Text {
+  position: absolute;
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: bold;
   font-size: 34px;
   line-height: 40px;
-  /* identical to box height */
-
   text-align: center;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-
+  margin-top: 180px;
   color: white;
-  margin-bottom: 120px;
 }
 
 @media screen and (max-width: 1024px) {
-  iframe {
+  .Wrapper {
     width: 84%;
   }
 }
 
 @media screen and (max-width: 768px) {
   iframe {
+    margin-bottom: 0;
+  }
+  .Wrapper {
     width: 94.22%;
-    height: 300px;
     margin-bottom: 40px;
+  }
+  .InitialContainer {
+    margin-bottom: 80px;
   }
   .CTAButton {
     width: 90%;
     align-items: stretch;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 40px;
   }
   .Text {
     color: #000000;
-    margin-bottom: -80px;
+    margin-bottom: -35%;
   }
-  .VideoControl {
-    margin-bottom: 100px;
+  .Wrapper .VideoControl {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Text {
+    margin-bottom: -30%;
   }
 }

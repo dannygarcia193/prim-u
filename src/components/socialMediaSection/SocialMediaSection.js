@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./SocialMediaSection.module.css";
 import { useStaticQuery, graphql } from "gatsby";
-
+import BackgroundImage from "gatsby-background-image";
 const SocialMediaSection = () => {
   const data = useStaticQuery(graphql`
     {
@@ -11,7 +11,10 @@ const SocialMediaSection = () => {
         callToActionLink
         image {
           fluid {
+            base64
+            tracedSVG
             srcWebp
+            srcSetWebp
           }
           title
         }
@@ -24,11 +27,13 @@ const SocialMediaSection = () => {
 
   return (
     <div className={styles.Container}>
-      <div
+      <BackgroundImage
+        Tag="div"
+        key={data.id}
         className={styles.Image}
-        style={{
-          backgroundImage: `url(${"https:" + data.image.fluid.srcWebp})`,
-        }}
+        fluid={data.image.fluid}
+        role="img"
+        aria-label={"Image of " + data.image.title + " service"}
       />
       <div className={styles.Info}>
         <h3 className={styles.Heading}>

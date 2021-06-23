@@ -1,3 +1,4 @@
+import BackgroundImage from "gatsby-background-image";
 import React from "react";
 import * as styles from "./Card.module.css";
 
@@ -5,12 +6,14 @@ const Card = ({ small, data }) => {
   const size = small === true ? styles.Small : styles.Large;
   const cards = data.map(({ node }) => {
     return (
-      <div
+      <BackgroundImage
+        Tag="div"
         key={node.id}
         className={styles.CardContainer + " " + size}
-        style={{
-          backgroundImage: `url(${"https:" + node.image.fluid.srcWebp})`,
-        }}
+        fluid={node.image.fluid}
+        role="img"
+        aria-label={"Image of " + node.image.title + " service"}
+        preserveStackingContext={true}
       >
         <div className={styles.Card}>
           <div className={styles.TextContainer}>
@@ -37,7 +40,7 @@ const Card = ({ small, data }) => {
             </a>
           </div>
         </div>
-      </div>
+      </BackgroundImage>
     );
   });
   return <div>{cards}</div>;
