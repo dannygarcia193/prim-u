@@ -103,7 +103,6 @@ const IndexPage = () => {
           <Header text={"Beauty products"} bold={"for u"} text2={""} />
           <ProductContainer />
           <hr />
-          <Header text={"Frequently asked"} bold={"questions"} text2={""} />
           <FAQContainer />
           <hr />
           <SocialMediaSection />

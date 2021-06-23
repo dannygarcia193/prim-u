@@ -1,5 +1,6 @@
 import React from "react";
 import * as styles from "./Scrollbar.module.css";
+import RightArrow, { LeftArrow } from "./ControlIcons";
 const Scrollbar = ({ currentRef, idx }) => {
   function scroll(scrollOffset) {
     const disableLeft = currentRef.current.scrollLeft === 0 && scrollOffset < 0;
@@ -46,12 +47,16 @@ const Scrollbar = ({ currentRef, idx }) => {
         aria-label="Scroll left"
         className={styles.ScrollControl + " " + styles.Left}
         onClick={(e) => scroll(-0.2)}
-      />
+      >
+        <LeftArrow />
+      </button>
       <button
         aria-label="Scroll right"
         className={styles.ScrollControl + " " + styles.Right}
         onClick={(e) => scroll(0.2)}
-      />
+      >
+        <RightArrow />
+      </button>
     </div>
   );
 };

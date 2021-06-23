@@ -1,7 +1,6 @@
 require("dotenv").config();
 const path = require(`path`);
 
-
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken:

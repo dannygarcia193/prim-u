@@ -6,12 +6,28 @@ const Hero = () => {
   const data = useStaticQuery(graphql`
     {
       contentfulMainSection {
+        image {
+          file {
+            url
+          }
+        }
         heroText
       }
     }
   `).contentfulMainSection;
+  const [heroImage, setHeroImage] = React.useState();
+  React.useEffect(() => {
+    setTimeout(() => {
+      setHeroImage(true);
+    }, 100);
+  }, []);
+
+  const image = heroImage
+    ? { backgroundImage: `url(${data.image.file.url})` }
+    : { backgroundColor: "black" };
+
   return (
-    <div className={styles.Hero}>
+    <div className={styles.Hero} style={image}>
       <div className={styles.HeroContainer}>
         <p className={styles.Title}>{data.heroText}</p>
       </div>
