@@ -12,9 +12,9 @@ const RightArrow = () => {
       <path
         d="M1.5 2L8 8.5L1.5 15"
         stroke="black"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -32,9 +32,9 @@ export const LeftArrow = () => {
       <path
         d="M8.5 2L2 8.5L8.5 15"
         stroke="black"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

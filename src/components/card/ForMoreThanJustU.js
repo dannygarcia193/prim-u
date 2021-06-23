@@ -27,12 +27,11 @@ const ForMoreThanJustU = () => {
         }
       }
     }
-  `);
-  const items = data.allContentfulForMoreThanJustYouSection.edges;
+  `).allContentfulForMoreThanJustYouSection.edges;
   return (
     <div>
       <Header text={"for"} bold={"more"} text2={"than just u"} />
-      <Card small={true} data={items} />
+      <Card small={true} data={data} />
     </div>
   );
 };

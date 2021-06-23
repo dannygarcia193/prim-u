@@ -3,7 +3,7 @@ import * as styles from "./Video.module.css";
 import Header from "../header/Header";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-
+import PlayButton from "./PlayButton";
 const VideoContainer = () => {
   const data = useStaticQuery(graphql`
     {
@@ -49,7 +49,7 @@ const VideoContainer = () => {
         <div className={styles.Wrapper}>
           <div id="replace" className={styles.InitialContainer}>
             <StaticImage src="../../images/makeup.jpg" alt="Youtube Preview" />
-            <div className={styles.VideoControl} />
+            <PlayButton className={styles.VideoControl} />
             <p className={styles.Text}>{data.title}</p>
           </div>
         </div>

@@ -1,10 +1,9 @@
 import * as React from "react";
 import "./index.css";
+import Head from "../components/head/Head";
 import Navbar from "../components/nav/Nav";
 import Hero from "../components/hero/Hero";
-import ForCustomers from "../components/card/ForCustomers";
 import Gallery from "../components/gallery/Gallery";
-import Header from "../components/header/Header";
 import Services from "../components/gallery/Services";
 import AppSection from "../components/app/App";
 import VideoContainer from "../components/videoSection/Video";
@@ -13,8 +12,8 @@ import ProductContainer from "../components/products/Products";
 import FAQContainer from "../components/accordion/FAQContainer";
 import SocialMediaSection from "../components/socialMediaSection/SocialMediaSection";
 import Footer from "../components/footer/Footer";
+import ForCustomers from "../components/card/ForCustomers";
 import ForMoreThanJustU from "../components/card/ForMoreThanJustU";
-import { useStaticQuery, graphql } from "gatsby";
 
 const IndexPage = () => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -55,23 +54,15 @@ const IndexPage = () => {
     };
   });
 
-  const data = useStaticQuery(graphql`
-    {
-      contentfulMainSection {
-        siteTitle
-      }
-    }
-  `).contentfulMainSection;
-
   return (
     <>
+      <Head />
       <Navbar
         collapsedNavbar={collapsedNavbar}
         lightNav={lightNav}
         setCollapsedNavbar={setCollapsedNavbar}
       />
       <main>
-        <title>{data.siteTitle}</title>
         <Hero />
         <div className="back-to-top show-back-to-top">
           {isVisible && (
@@ -86,21 +77,14 @@ const IndexPage = () => {
           <hr />
           <ForMoreThanJustU />
           <hr />
-          <Header
-            text={"For those who provide"}
-            bold={"beauty services"}
-            text2={""}
-          />
           <Services />
         </div>
         <AppSection />
         <div className="MarginContainer">
           <VideoContainer />
           <hr />
-          <Header text={"What our"} bold={"customers"} text2={"say"} />
           <ReviewContainer />
           <hr />
-          <Header text={"Beauty products"} bold={"for u"} text2={""} />
           <ProductContainer />
           <hr />
           <FAQContainer />

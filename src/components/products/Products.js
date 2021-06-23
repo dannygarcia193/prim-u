@@ -3,7 +3,7 @@ import * as styles from "./Products.module.css";
 import Carousel from "../carousel/Carousel";
 import { useStaticQuery, graphql } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
-
+import Header from "../header/Header";
 const Products = () => {
   const data = useStaticQuery(graphql`
     {
@@ -64,6 +64,7 @@ const ProductContainer = () => {
   const currentRef = React.useRef(null);
   return (
     <>
+      <Header text={"Beauty products"} bold={"for u"} text2={""} />
       <Carousel currentRef={currentRef} idx={"Products"}>
         <Products />
       </Carousel>

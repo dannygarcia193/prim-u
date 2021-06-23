@@ -3,6 +3,7 @@ import * as styles from "./Reviews.module.css";
 import Carousel from "../carousel/Carousel";
 import { useStaticQuery, graphql } from "gatsby";
 import Star from "./Star";
+import Header from "../header/Header";
 const Reviews = () => {
   const data = useStaticQuery(graphql`
     {
@@ -46,9 +47,12 @@ const Reviews = () => {
 const ReviewContainer = () => {
   const currentRef = React.useRef(null);
   return (
-    <Carousel idx={"Reviews"} currentRef={currentRef}>
-      <Reviews />
-    </Carousel>
+    <>
+      <Header text={"What our"} bold={"customers"} text2={"say"} />
+      <Carousel idx={"Reviews"} currentRef={currentRef}>
+        <Reviews />
+      </Carousel>
+    </>
   );
 };
 

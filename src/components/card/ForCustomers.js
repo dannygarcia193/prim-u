@@ -27,9 +27,8 @@ const ForCustomers = () => {
         }
       }
     }
-  `);
-  const items = data.allContentfulForCustomersSection.edges;
-  return <Card small={false} data={items} />;
+  `).allContentfulForCustomersSection.edges;
+  return <Card small={false} data={data} />;
 };
 
 export default ForCustomers;
