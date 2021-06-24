@@ -36,12 +36,12 @@ const LinkContainer = () => {
   );
 };
 
-const LogoContainer = () => {
+const LogoContainer = ({ lightNav }) => {
   return (
     <div className={styles.LogoContainer}>
       <Logo
         className={styles.Logo}
-        fill={"rgb(255 255 255 / 60%)"}
+        fill={!lightNav ? "rgb(255 255 255 / 60%)" : "rgba(166, 166, 166, 1)"}
         fill2={"white"}
         fill3={"white"}
       />
@@ -68,11 +68,10 @@ const NavToggler = ({ collapsedNavbar, setCollapsedNavbar }) => {
 };
 const Navbar = ({ collapsedNavbar, lightNav, setCollapsedNavbar }) => {
   const showDropdownNav = collapsedNavbar === true ? styles.DropdownNav : "";
+  const roundedNav = lightNav ? styles.RoundedNav : "";
   const dynamicStyles = {
     backgroundColor: lightNav ? "white" : "transparent",
     height: lightNav ? "5rem" : "5.625rem",
-    width: lightNav ? "95%" : "100%",
-    borderRadius: lightNav ? "10px" : "0px",
     transition: "all 0.2s",
   };
   const navStyle = { borderRadius: "10px", width: "95%" };
@@ -80,13 +79,17 @@ const Navbar = ({ collapsedNavbar, lightNav, setCollapsedNavbar }) => {
     lightNav === true || collapsedNavbar === true ? styles.textDark : "";
 
   return (
-    <nav role="navigation" className={styles.Nav} style={dynamicStyles}>
+    <nav
+      role="navigation"
+      className={styles.Nav + " " + roundedNav}
+      style={dynamicStyles}
+    >
       <div
         className={
           styles.NavContainer + " " + showDropdownNav + " " + turnTextDark
         }
       >
-        <LogoContainer />
+        <LogoContainer lightNav={lightNav} />
         <NavToggler
           collapsedNavbar={collapsedNavbar}
           setCollapsedNavbar={setCollapsedNavbar}

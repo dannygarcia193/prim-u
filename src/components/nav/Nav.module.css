@@ -99,6 +99,39 @@ svg:hover {
   cursor: pointer;
 }
 
+.textDark.NavContainer,
+.textDark .LogoContainer {
+  align-items: center;
+}
+.textDark .NavLink,
+.textDark .LogoTitle {
+  color: var(--black);
+}
+.textDark svg > path:last-child {
+  fill: #a6a6a6;
+}
+.textDark svg > path:not(:first-child) {
+  fill: var(--black);
+}
+.textDark .NavToggler svg > rect {
+  fill: var(--black);
+}
+
+.textDark.NavContainer.DropdownNav .NavLinkContainer {
+  padding-bottom: 2.5rem;
+}
+.textDark.NavContainer.DropdownNav .LogoContainer {
+  align-items: flex-start;
+}
+.textDark.NavContainer .NavToggler,
+.textDark.NavContainer .NavLinkContainer {
+  padding-bottom: 0;
+}
+.textDark .NavLink:hover,
+.textDark .LogoTitle:hover {
+  color: var(--primary);
+}
+
 @media screen and (max-width: 768px) {
   .Nav {
     height: 3.3125rem !important;
@@ -178,37 +211,11 @@ svg:hover {
     fill: var(--black);
   }
 }
-.textDark.NavContainer,
-.textDark .LogoContainer {
-  align-items: center;
-}
-.textDark .NavLink,
-.textDark .LogoTitle {
-  color: var(--black);
-}
-.textDark svg > path:last-child {
-  fill: #a6a6a6;
-}
-.textDark svg > path:not(:first-child) {
-  fill: var(--black);
-}
-.textDark .NavToggler svg > rect {
-  fill: var(--black);
-}
-
-.textDark.NavContainer.DropdownNav .NavLinkContainer {
-  padding-bottom: 2.5rem;
-}
-.textDark.NavContainer.DropdownNav .LogoContainer {
-  align-items: flex-start;
-}
-.textDark.NavContainer .NavToggler,
-.textDark.NavContainer .NavLinkContainer {
-  padding-bottom: 0;
-}
-.textDark .NavLink:hover,
-.textDark .LogoTitle:hover {
-  color: var(--primary);
+@media screen and (max-width: 640px) {
+  .Nav.RoundedNav {
+    width: 95%;
+    border-radius: 10px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
