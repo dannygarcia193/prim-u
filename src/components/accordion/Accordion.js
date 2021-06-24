@@ -10,7 +10,7 @@ const Accordion = ({ data, itemsToShow }) => {
       </details>
     );
   });
-  return <div>{faq}</div>;
+  return <div className={styles.FAQContainer}>{faq}</div>;
 };
 export const Heading = ({ heading }) => {
   return (

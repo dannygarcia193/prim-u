@@ -2,10 +2,17 @@
   display: flex;
   flex-wrap: wrap;
 }
+.FAQContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .QAContainer {
-  display: inline-flex;
+  display: flex;
   margin-bottom: 60px;
-  flex-direction: column;
+  max-width: 50%;
   width: 50%;
 }
 .Question {
@@ -34,16 +41,14 @@
   padding-left: 30px;
 }
 button.ShowMore {
-  padding: 11px 118px;
-  background: #ffffff;
-  border: 1px solid #683d83;
-  box-sizing: border-box;
-  border-radius: 10px;
-  margin: auto;
-  margin-bottom: 100px;
-  margin-top: 40px;
   display: flex;
   justify-content: center;
+  background: var(--white);
+  padding: 11px 118px;
+  margin: auto;
+  margin-top: 40px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
 }
 button.ShowMore:hover {
   background-color: var(--primary);
@@ -66,6 +71,11 @@ button:hover .BtnText {
 .Heading {
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
+}
+.Header {
+  margin-bottom: -20px;
+  margin-top: 80px;
 }
 .SectionName {
   font-family: Roboto Condensed;
@@ -97,6 +107,7 @@ button:hover .BtnText {
 
 @media screen and (max-width: 640px) {
   .QAContainer {
+    max-width: 100%;
     width: 100%;
     margin-bottom: 40px;
   }
@@ -121,6 +132,12 @@ button:hover .BtnText {
   }
   .HR {
     margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .Heading {
+    margin-top: 0;
+  }
+  .Header {
     margin-bottom: 40px;
   }
 }
