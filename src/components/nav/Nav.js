@@ -71,8 +71,11 @@ const Navbar = ({ collapsedNavbar, lightNav, setCollapsedNavbar }) => {
   const dynamicStyles = {
     backgroundColor: lightNav ? "white" : "transparent",
     height: lightNav ? "5rem" : "5.625rem",
+    width: lightNav ? "95%" : "100%",
+    borderRadius: lightNav ? "10px" : "0px",
     transition: "all 0.2s",
   };
+  const navStyle = { borderRadius: "10px", width: "95%" };
   const turnTextDark =
     lightNav === true || collapsedNavbar === true ? styles.textDark : "";
 
