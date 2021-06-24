@@ -82,9 +82,7 @@ const IndexPage = () => {
         <AppSection />
         <div className="MarginContainer">
           <VideoContainer />
-          <hr />
           <ReviewContainer />
-          <hr />
           <ProductContainer />
           <FAQContainer />
           <SocialMediaSection />

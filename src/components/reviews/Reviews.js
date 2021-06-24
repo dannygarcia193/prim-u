@@ -48,10 +48,16 @@ const ReviewContainer = () => {
   const currentRef = React.useRef(null);
   return (
     <>
-      <Header text={"What our"} bold={"customers"} text2={"say"} />
+      <Header
+        text={"What our"}
+        bold={"customers"}
+        text2={"say"}
+        customClass={" " + styles.Header}
+      />
       <Carousel idx={"Reviews"} currentRef={currentRef}>
         <Reviews />
       </Carousel>
+      <hr className={styles.HR} />
     </>
   );
 };

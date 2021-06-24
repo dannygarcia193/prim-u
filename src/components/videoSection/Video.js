@@ -44,7 +44,12 @@ const VideoContainer = () => {
 
   return (
     <>
-      <Header text={""} bold={"Primlancers"} text2={"at work"} />
+      <Header
+        text={""}
+        bold={"Primlancers"}
+        text2={"at work"}
+        customClass={" " + styles.Header}
+      />
       <div className="youtube-container">
         <div className={styles.Wrapper}>
           <div id="replace" className={styles.InitialContainer}>
@@ -66,6 +71,7 @@ const VideoContainer = () => {
           </span>
         </button>
       </a>
+      <hr className={styles.HR} />
     </>
   );
 };

@@ -65,9 +65,9 @@ const ProductContainer = () => {
   return (
     <>
       <Header
-        text={"Beauty products"}
-        bold={"for u"}
-        text2={""}
+        text={""}
+        bold={"Beauty products"}
+        text2={"for u"}
         customClass={" " + styles.Header}
       />
       <Carousel currentRef={currentRef} idx={"Products"}>
