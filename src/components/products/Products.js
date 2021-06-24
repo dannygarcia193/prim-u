@@ -64,7 +64,12 @@ const ProductContainer = () => {
   const currentRef = React.useRef(null);
   return (
     <>
-      <Header text={"Beauty products"} bold={"for u"} text2={""} />
+      <Header
+        text={"Beauty products"}
+        bold={"for u"}
+        text2={""}
+        customClass={" " + styles.Header}
+      />
       <Carousel currentRef={currentRef} idx={"Products"}>
         <Products />
       </Carousel>
@@ -73,7 +78,7 @@ const ProductContainer = () => {
           check out beauty products
         </span>
       </button>
-      <hr />
+      <hr className={styles.HR} />
     </>
   );
 };

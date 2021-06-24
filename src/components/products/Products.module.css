@@ -1,3 +1,7 @@
+.MainContainer {
+  display: inline-flex;
+  margin-bottom: 80px;
+}
 .ProductContainer {
   width: 400px;
   height: 100%;
@@ -5,13 +9,10 @@
   margin-right: 40px;
   background: #f2f2f2;
 }
-.MainContainer {
-  display: inline-flex;
-  margin-bottom: 80px;
-}
 .CTAButton {
   display: flex;
   margin: auto;
+  padding: 16px 44px;
   background-color: var(--primary);
 }
 .ButtonText {
@@ -64,6 +65,16 @@
   flex-direction: column;
   padding: 30px 24px;
 }
+.HR {
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
+.Header {
+  margin-bottom: 80px;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
 @media screen and (max-width: 1024px) {
   .ProductContainer {
@@ -86,7 +97,15 @@
   .MainContainer {
     margin-bottom: 60px;
   }
+  .HR {
+    margin-bottom: 60px;
+    margin-top: 55px;
+  }
+  .Header {
+    margin-bottom: 30px;
+  }
 }
+
 @media screen and (max-width: 640px) {
   .CTAButton {
     display: none;
