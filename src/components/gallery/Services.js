@@ -2,6 +2,7 @@ import * as styles from "./Gallery.module.css";
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
+import Header from "../header/Header";
 
 const Services = () => {
   const data = useStaticQuery(graphql`
@@ -65,6 +66,11 @@ const Services = () => {
   });
   return (
     <>
+      <Header
+        text={"For those who provide"}
+        bold={"beauty services"}
+        text2={""}
+      />
       <div className={styles.Gallery} id="WORK-WITH-US">
         {services}
       </div>

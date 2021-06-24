@@ -4,20 +4,30 @@ import * as styles from "./Accordion.module.css";
 import Accordion, { Heading } from "./Accordion";
 import Header from "../header/Header";
 
+const BottomContainer = ({ totalItems, itemsToShow, setItemsToShow }) => {
+  return itemsToShow === totalItems ? (
+    <div className={styles.ExtraSpace}>{".    "}</div>
+  ) : (
+    <button
+      className={styles.ShowMore}
+      onClick={() => setItemsToShow(itemsToShow + 2)}
+    >
+      <span className={styles.BtnText}>show more</span>
+    </button>
+  );
+};
 const CustomerFaq = ({ data }) => {
   const [itemsToShow, setItemsToShow] = React.useState(4);
+
   return (
     <div className={styles.MainContainer} id="FAQ">
       <Heading heading={"for customers"} />
       <Accordion data={data} itemsToShow={itemsToShow} />
-      {itemsToShow === data.length ? undefined : (
-        <button
-          className={styles.ShowMore}
-          onClick={() => setItemsToShow(itemsToShow + 2)}
-        >
-          <span className={styles.BtnText}>show more</span>
-        </button>
-      )}
+      <BottomContainer
+        totalItems={data.length}
+        itemsToShow={itemsToShow}
+        setItemsToShow={setItemsToShow}
+      />
     </div>
   );
 };
@@ -27,15 +37,11 @@ const PartnerFaq = ({ data }) => {
     <div className={styles.MainContainer}>
       <Heading heading={"for Partners"} />
       <Accordion data={data} itemsToShow={itemsToShow} />
-      {itemsToShow === data.length ? undefined : (
-        <button
-          className={styles.ShowMore}
-          style={{ marginBottom: 0 }}
-          onClick={() => setItemsToShow(itemsToShow + 2)}
-        >
-          <span className={styles.BtnText}>show more</span>
-        </button>
-      )}
+      <BottomContainer
+        totalItems={data.length}
+        itemsToShow={itemsToShow}
+        setItemsToShow={setItemsToShow}
+      />
     </div>
   );
 };

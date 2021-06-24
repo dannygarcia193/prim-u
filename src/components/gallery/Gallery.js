@@ -1,8 +1,8 @@
 import * as styles from "./Gallery.module.css";
 import React from "react";
-import Header from "../header/Header";
 import { useStaticQuery, graphql } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
+import Header from "../header/Header";
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`

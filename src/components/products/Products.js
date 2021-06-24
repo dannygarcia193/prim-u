@@ -73,6 +73,7 @@ const ProductContainer = () => {
           check out beauty products
         </span>
       </button>
+      <hr />
     </>
   );
 };
