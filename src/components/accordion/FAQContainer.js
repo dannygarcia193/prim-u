@@ -68,6 +68,7 @@ const FAQContainer = () => {
       <Header text={"Frequently asked"} bold={"questions"} text2={""} />
       <CustomerFaq data={items} />
       <PartnerFaq data={items} />
+      <hr className={styles.HR} />
     </>
   );
 };

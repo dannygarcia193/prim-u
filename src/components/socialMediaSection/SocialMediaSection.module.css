@@ -10,9 +10,10 @@
 }
 .Image {
   width: 48%;
-  height: 48vh;
+  height: 40vw;
   margin-top: auto;
   margin-bottom: auto;
+  margin-right: auto;
 }
 .Info {
   width: 48%;
@@ -22,18 +23,18 @@
   justify-content: center;
 }
 .Heading {
-  font-family: Roboto Condensed;
+  font-family: var(--robotoCondensed);
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
   line-height: 59px;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 40px;
 }
 .Text {
-  font-family: Roboto;
+  font-family: var(--roboto);
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -41,27 +42,30 @@
   color: #000000;
   margin-bottom: 60px;
 }
+.PrimaryText {
+  color: var(--primary);
+}
+
 button.Btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: #ffffff;
-  border: 1px solid #683d83;
-  box-sizing: border-box;
+  background: var(--primary);
+  border: none;
   border-radius: 10px;
   padding: 11px 126px;
   width: 400px;
 }
 
 .BtnText {
-  font-family: Roboto Condensed;
+  font-family: var(--robotoCondensed);
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
   line-height: 37px;
   text-align: center;
   letter-spacing: -0.01em;
-  color: #683d83;
+  color: var(--white);
 }
 button.Btn:hover {
   background-color: var(--primary);
@@ -69,32 +73,11 @@ button.Btn:hover {
 button:hover .BtnText {
   color: white;
 }
-.PrimaryText {
-  color: var(--primary);
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .Image {
-    height: 35vh;
-  }
-}
+
 @media screen and (max-width: 1024px) {
   button.Btn {
     width: 300px;
   }
-}
-@media screen and (max-width: 768px) {
-  .Container {
-    flex-direction: column;
-    margin-bottom: 80px;
-  }
-  .Info {
-    width: 100%;
-  }
-  .Image {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-
   .Heading {
     font-size: 34px;
     line-height: 40px;
@@ -103,6 +86,20 @@ button:hover .BtnText {
   .Text {
     font-size: 18px;
     margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Container {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+  .Image {
+    height: 75vw;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .Info {
+    width: 100%;
   }
   .BtnText {
     font-size: 24px;

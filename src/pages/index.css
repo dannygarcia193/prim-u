@@ -151,6 +151,7 @@ details[open] summary ~ * {
 }
 details > summary::after {
   content: " +";
+  margin-left: 5%;
 }
 details[open] > summary::after {
   content: " -";

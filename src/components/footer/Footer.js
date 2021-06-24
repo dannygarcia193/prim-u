@@ -1,5 +1,4 @@
 import * as styles from "./Footer.module.css";
-import { a } from "gatsby";
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -22,7 +21,7 @@ const Footer = () => {
     }
   `).contentfulFooterSection;
   return (
-    <div className={styles.FooterContainer}>
+    <footer className={styles.FooterContainer}>
       <ul className={styles.DocumentLinksContainer} role="navigation">
         <div className={styles.Heading}>PRIM-U APP © 2020</div>
         <li className={styles.LinkItem}>
@@ -142,7 +141,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </footer>
   );
 };
 

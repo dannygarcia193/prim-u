@@ -8,14 +8,24 @@ const LinkContainer = () => {
   return (
     <ul className={styles.NavLinkContainer}>
       <li className={styles.NavItem}>
-        <Link className={styles.NavLink} to="#MAKE-A-BOOKING">
+        <a
+          className={styles.NavLink}
+          href="https://www.prim-u.app/en/list"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           MAKE A BOOKING
-        </Link>
+        </a>
       </li>
       <li className={styles.NavItem}>
-        <Link className={styles.NavLink} to="#WORK-WITH-US">
+        <a
+          className={styles.NavLink}
+          href="https://admin.prim-u.app/en/onboard/merchant-signup?marketplace_reference_id=80a44a38349c4c6cbc0ac465d9ce7129&user=Primlancer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           WORK WITH US
-        </Link>
+        </a>
       </li>
       <li className={styles.NavItem}>
         <Link className={styles.NavLink} to="#FAQ">

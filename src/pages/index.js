@@ -86,9 +86,7 @@ const IndexPage = () => {
           <ReviewContainer />
           <hr />
           <ProductContainer />
-          <hr />
           <FAQContainer />
-          <hr />
           <SocialMediaSection />
         </div>
         <Footer />

@@ -73,6 +73,7 @@ li.LinkItem {
   .ContactListContainer {
     margin-left: 0;
     padding-right: 0;
+    margin-right: 0;
     align-items: center;
     padding-bottom: 60px;
     width: 100%;
