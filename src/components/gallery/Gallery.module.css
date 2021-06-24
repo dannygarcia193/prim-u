@@ -74,6 +74,10 @@
   height: 100%;
   width: 48%;
 }
+.HR {
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
 @media screen and (max-width: 1024px) {
   .Regular.ImageContainer {
     margin-bottom: 2.5rem;
@@ -86,7 +90,11 @@
     margin: 40px auto;
   }
 }
-
+@media screen and (max-width: 1024px) {
+  .HR {
+    margin-top: 60px;
+  }
+}
 @media screen and (max-width: 768px) {
   .Regular.ImageContainer {
     margin-bottom: 1.25rem;
@@ -102,6 +110,7 @@
   }
   .Custom.ImageContainer {
     height: 326px;
+    margin-bottom: 30px;
   }
   .CTAButton {
     margin-top: 30px;
@@ -113,5 +122,12 @@
   }
   .ExtraSpace {
     display: none;
+  }
+  .Header {
+    margin-bottom: 40px !important;
+  }
+  .HR {
+    margin-bottom: 60px;
+    margin-top: 40px;
   }
 }

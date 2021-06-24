@@ -74,9 +74,7 @@ const IndexPage = () => {
         <div className="MarginContainer">
           <ForCustomers />
           <Gallery />
-          <hr />
           <ForMoreThanJustU />
-          <hr />
           <Services />
         </div>
         <AppSection />

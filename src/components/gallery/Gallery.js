@@ -48,6 +48,7 @@ const Gallery = () => {
       <div className={styles.ExtraSpace} id="MAKE-A-BOOKING" />
       <Header text={"treat yourself with"} bold={"our services"} text2={""} />
       <div className={styles.Gallery}>{image}</div>
+      <hr className={styles.HR} />
     </>
   );
 };

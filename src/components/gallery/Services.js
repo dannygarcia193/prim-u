@@ -70,6 +70,7 @@ const Services = () => {
         text={"For those who provide"}
         bold={"beauty services"}
         text2={""}
+        customClass={" " + styles.Header}
       />
       <div className={styles.Gallery} id="WORK-WITH-US">
         {services}
