@@ -38,7 +38,7 @@ const LinkContainer = () => {
 
 const LogoContainer = ({ lightNav }) => {
   return (
-    <div className={styles.LogoContainer}>
+    <Link className={styles.LogoContainer} to="/">
       <Logo
         className={styles.Logo}
         fill={!lightNav ? "rgb(255 255 255 / 60%)" : "rgba(166, 166, 166, 1)"}
@@ -46,7 +46,7 @@ const LogoContainer = ({ lightNav }) => {
         fill3={"white"}
       />
       <span className={styles.LogoTitle}>PRIM-U</span>
-    </div>
+    </Link>
   );
 };
 

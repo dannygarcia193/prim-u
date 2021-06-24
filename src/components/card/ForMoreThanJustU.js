@@ -4,7 +4,6 @@ import Header from "../header/Header";
 import Card from "./Card";
 import { HR } from "./Card.module.css";
 const ForMoreThanJustU = () => {
-  console.log(HR);
   const data = useStaticQuery(graphql`
     {
       allContentfulForMoreThanJustYouSection {
