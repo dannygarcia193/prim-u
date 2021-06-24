@@ -237,7 +237,7 @@ button:hover .ButtonText {
   font-size: 16px;
   color: #ffffff;
   background-color: #000000;
-  z-index: 4;
+  z-index: 1000000;
   width: 45px;
   text-align: center;
   height: 45px;
