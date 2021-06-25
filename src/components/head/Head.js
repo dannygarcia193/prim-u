@@ -28,7 +28,7 @@ const Head = () => {
       />
       <meta
         property="og:image"
-        content="https://prim-u.com/wp-content/uploads/2019/12/star-16.png"
+        content="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9494c093-df76-43ef-943b-459812edc9d3%2FHome_-_Prim-U_2021-06-02_20-00-48.png?table=block&id=72835b75-5dc2-4a38-b799-dc9ece5fef91&spaceId=daa3be6d-804a-415d-9112-8c01fba24d73&width=500&userId=e8d3f8b6-ef57-42ee-b9ac-d3d0cd1442be&cache=v2"
       />
 
       <meta property="twitter:card" content="summary_large_image" />
@@ -40,7 +40,7 @@ const Head = () => {
       />
       <meta
         property="twitter:image"
-        content="https://prim-u.com/wp-content/uploads/2019/12/star-16.png"
+        content="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9494c093-df76-43ef-943b-459812edc9d3%2FHome_-_Prim-U_2021-06-02_20-00-48.png?table=block&id=72835b75-5dc2-4a38-b799-dc9ece5fef91&spaceId=daa3be6d-804a-415d-9112-8c01fba24d73&width=500&userId=e8d3f8b6-ef57-42ee-b9ac-d3d0cd1442be&cache=v2"
       />
       <link
         rel="icon"
