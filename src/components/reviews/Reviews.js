@@ -24,7 +24,7 @@ const Reviews = () => {
   const reviews = data.map(({ node }) => {
     const items = [];
     for (let i = 0; i < node.rating; i++) {
-      items.push(<Star key={i} />);
+      items.push(<Star customClass={styles.Star} key={i} />);
     }
     return (
       <div key={node.id} className={styles.ReviewContainer}>
@@ -32,13 +32,11 @@ const Reviews = () => {
           <div className={styles.Reviewer}>{node.author}</div>
           <div className={styles.RatingContainer}>{items}</div>
         </div>
-        <div className={styles.Review}>
-          {node.review.review.split("\n\n").map((paragraph, idx) => (
-            <p key={idx} className={styles.Review}>
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        {node.review.review.split("\n\n").map((paragraph, idx) => (
+          <p key={idx} className={styles.Review}>
+            {paragraph}
+          </p>
+        ))}
       </div>
     );
   });

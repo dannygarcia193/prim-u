@@ -18,7 +18,7 @@ const Head = () => {
         name="description"
         content="Prim-U is South Africa's first online booking hub that connects world-class beauty entrepreneurs in the industry to customers and hundreds of ..."
       />
-
+      <meta name="robots" content="index, follow" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://prim-u.com/" />
       <meta property="og:title" content="Home - Prim-U" />

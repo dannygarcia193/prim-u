@@ -48,7 +48,7 @@ const Products = () => {
               {paragraph}
             </p>
           ))}
-          <a href={node.priceLink} target="_blank" rel="noopener noreferrer">
+          <a href="/">
             <div className={styles.PriceContainer}>
               <span className={styles.Price}>{node.price}</span>
             </div>

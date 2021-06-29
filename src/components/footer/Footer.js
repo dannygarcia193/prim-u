@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <footer className={styles.FooterContainer}>
       <ul className={styles.DocumentLinksContainer} role="navigation">
-        <div className={styles.Heading}>PRIM-U APP © 2020</div>
+        <div className={styles.Heading}>PRIM-U APP © 2021</div>
         <li className={styles.LinkItem}>
           <a
             className={styles.TextLink}

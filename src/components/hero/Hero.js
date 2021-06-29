@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <div className={styles.Hero} style={image}>
       <div className={styles.HeroContainer}>
-        <p className={styles.Title}>{data.heroText}</p>
+        <h1 className={styles.Title}>{data.heroText}</h1>
       </div>
     </div>
   );

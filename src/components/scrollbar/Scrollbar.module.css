@@ -21,6 +21,12 @@ button.ScrollControl.Right[disabled] {
   color: gray;
   opacity: 0.5;
 }
+button.ScrollControl svg:hover path {
+  fill: transparent;
+}
+button.ScrollControl svg:hover {
+  transform: scale(1.1);
+}
 .ScrollControl.Right {
   background-size: contain;
   background-repeat: no-repeat;

@@ -74,7 +74,10 @@
   height: 40.1875rem;
   padding: 3.75rem;
 }
-
+.HR {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .ButtonContainer {
     align-items: flex-start;
@@ -106,10 +109,7 @@
     margin-bottom: 0;
   }
 }
-.HR {
-  margin-bottom: 100px;
-  margin-top: 100px;
-}
+
 @media screen and (max-width: 768px) {
   .Card {
     display: flex;
@@ -138,7 +138,7 @@
     margin-bottom: 60px;
   }
   .Small.CardContainer {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .Heading {
     font-size: 2.125rem;

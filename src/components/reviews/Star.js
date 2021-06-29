@@ -1,8 +1,9 @@
 import React from "react";
 
-const Star = () => {
+const Star = ({ customClass }) => {
   return (
     <svg
+      className={customClass}
       width="20"
       height="19"
       viewBox="0 0 20 19"

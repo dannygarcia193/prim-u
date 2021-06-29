@@ -4,7 +4,7 @@
   width: 520px;
   height: 100%;
   margin-right: 40px;
-  padding: 20px;
+  padding: 25px;
   display: inline-flex;
   flex-direction: column;
 }
@@ -58,6 +58,13 @@
   margin-left: 20px;
   margin-right: 20px;
 }
+svg.Star:hover {
+  cursor: initial;
+}
+svg.Star:hover path {
+  fill: var(--primary);
+}
+
 @media screen and (max-width: 768px) {
   .MainContainer {
     margin-bottom: 60px;

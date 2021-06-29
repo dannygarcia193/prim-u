@@ -31,7 +31,7 @@ const AppSection = () => {
   return (
     <div className={styles.AppSection}>
       <div className={styles.TextContainer}>
-        <h2 className={styles.Title}>we have an app for u</h2>
+        <h3 className={styles.Title}>we have an app for u</h3>
         {data.description.description.split("\n\n").map((paragraph, idx) => (
           <p key={idx} className={styles.Text}>
             {paragraph}
